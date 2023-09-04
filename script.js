@@ -25,3 +25,12 @@ silverSetter.addEventListener("click", function () {
   silverSetterNumber--;
   silverSetter.textContent = silverSetterNumber;
 });
+
+blueSetter.addEventListener("click", function () {
+  blueSetterNumber--;
+  blueSetter.textContent = blueSetterNumber;
+});
+redSetter.addEventListener("click", function () {
+  redSetterNumber--;
+  redSetter.textContent = redSetterNumber;
+});
