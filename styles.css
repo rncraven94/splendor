@@ -1,6 +1,6 @@
 .setter-body {
   font-size: 3rem;
-  border: 1px black;
+  border: 1px solid black;
 }
 .brown-setter {
   color: brown;
@@ -17,4 +17,7 @@
 
 .red-setter {
   color: red;
+}
+.player-one {
+  font-size: 3rem;
 }
