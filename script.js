@@ -1,5 +1,8 @@
 use: "strict";
 
+let currentPlayer;
+let playerOne;
+let playerTwo;
 const brownSetter = document.getElementById("brown-setter");
 let brownSetterNumber = 7;
 const greenSetter = document.getElementById("green-setter");
