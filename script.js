@@ -13,10 +13,14 @@ const blueSetter = document.getElementById("blue-setter");
 let blueSetterNumber = 7;
 const redSetter = document.getElementById("red-setter");
 let redSetterNumber = 7;
+const brownOne = document.getElementById("player-one-brown");
+let brownOneNumber = 0;
 
 brownSetter.addEventListener("click", function () {
   brownSetterNumber--;
   brownSetter.textContent = brownSetterNumber;
+  brownOneNumber++;
+  brownOne.textContent = brownOneNumber;
 });
 
 greenSetter.addEventListener("click", function () {
