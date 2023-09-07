@@ -1,27 +1,26 @@
-.setter-body {
-  font-size: 3rem;
+.setter-body,
+.player-one {
+  font-size: 2.6rem;
   border: 1px solid black;
 }
-.brown-setter {
+.brown-setter,
+.player-one-brown {
   color: brown;
 }
-.green-setter {
+.green-setter,
+.player-one-green {
   color: green;
 }
-.silver-setter {
+.silver-setter,
+.player-one-silver {
   color: silver;
 }
-.blue-setter {
+.blue-setter,
+.player-one-blue {
   color: blue;
 }
 
-.red-setter {
+.red-setter,
+.player-one-red {
   color: red;
-}
-.player-one {
-  font-size: 3rem;
-}
-
-.player-one-brown {
-  color: brown;
 }
