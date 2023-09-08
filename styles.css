@@ -10,19 +10,23 @@
   color: brown;
 }
 .green-setter,
-.player-one-green {
+.player-one-green,
+.player-two-green {
   color: green;
 }
 .silver-setter,
-.player-one-silver {
+.player-one-silver,
+.player-two-silver {
   color: silver;
 }
 .blue-setter,
-.player-one-blue {
+.player-one-blue,
+.player-two-blue {
   color: blue;
 }
 
 .red-setter,
-.player-one-red {
+.player-one-red,
+.player-two-red {
   color: red;
 }
