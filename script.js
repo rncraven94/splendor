@@ -3,7 +3,10 @@ use: "strict";
 let currentPlayer;
 let playerOne;
 let playerTwo;
+const confirmButton = document.getElementById("confirm-button");
 const brownSetter = document.getElementById("brown-setter");
+const playerOneSection = document.getElementById("player-one");
+const playerTwoSection = document.getElementById("player-two");
 let brownSetterNumber = 7;
 const greenSetter = document.getElementById("green-setter");
 let greenSetterNumber = 7;
@@ -15,6 +18,11 @@ const redSetter = document.getElementById("red-setter");
 let redSetterNumber = 7;
 const brownOne = document.getElementById("player-one-brown");
 let brownOneNumber = 0;
+
+confirmButton.addEventListener("click", function () {
+  playerTwo = currentPlayer;
+  playerOne = !currentPlayer;
+});
 
 brownSetter.addEventListener("click", function () {
   brownSetterNumber--;
