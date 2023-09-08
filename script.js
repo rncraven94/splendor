@@ -19,6 +19,8 @@ const redSetter = document.getElementById("red-setter");
 let redSetterNumber = 7;
 const brownOne = document.getElementById("player-one-brown");
 let brownOneNumber = 0;
+const brownTwo = document.getElementById("player-two-brown");
+let brownTwoNumber = 0;
 
 confirmButton.addEventListener("click", function () {
   currentPlayer = !currentPlayer;
@@ -35,8 +37,13 @@ confirmButton.addEventListener("click", function () {
 brownSetter.addEventListener("click", function () {
   brownSetterNumber--;
   brownSetter.textContent = brownSetterNumber;
-  brownOneNumber++;
-  brownOne.textContent = brownOneNumber;
+  if (currentPlayer) {
+    brownOneNumber++;
+    brownOne.textContent = brownOneNumber;
+  } else {
+    brownTwoNumber++;
+    brownTwo.textContent = brownTwoNumber;
+  }
 });
 
 greenSetter.addEventListener("click", function () {
