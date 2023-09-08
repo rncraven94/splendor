@@ -1,8 +1,9 @@
 use: "strict";
 
-let currentPlayer;
+let currentPlayer = true;
 let playerOne;
 let playerTwo;
+playerOne = currentPlayer;
 const confirmButton = document.getElementById("confirm-button");
 const brownSetter = document.getElementById("brown-setter");
 const playerOneSection = document.getElementById("player-one");
@@ -20,8 +21,15 @@ const brownOne = document.getElementById("player-one-brown");
 let brownOneNumber = 0;
 
 confirmButton.addEventListener("click", function () {
-  playerTwo = currentPlayer;
-  playerOne = !currentPlayer;
+  currentPlayer = !currentPlayer;
+
+  if (currentPlayer) {
+    playerOneSection.classList.remove("active-player");
+    playerTwoSection.classList.add("active-player");
+  } else {
+    playerOneSection.classList.add("active-player");
+    playerTwoSection.classList.remove("active-player");
+  }
 });
 
 brownSetter.addEventListener("click", function () {
