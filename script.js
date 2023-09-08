@@ -25,7 +25,7 @@ let brownTwoNumber = 0;
 confirmButton.addEventListener("click", function () {
   currentPlayer = !currentPlayer;
 
-  if (currentPlayer) {
+  if (!currentPlayer) {
     playerOneSection.classList.remove("active-player");
     playerTwoSection.classList.add("active-player");
   } else {
