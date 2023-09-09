@@ -21,6 +21,10 @@ const brownOne = document.getElementById("player-one-brown");
 let brownOneNumber = 0;
 const brownTwo = document.getElementById("player-two-brown");
 let brownTwoNumber = 0;
+const greenOne = document.getElementById("player-one-green");
+let greenOneNumber = 0;
+const greenTwo = document.getElementById("player-two-green");
+let greenTwoNumber = 0;
 
 confirmButton.addEventListener("click", function () {
   currentPlayer = !currentPlayer;
@@ -49,6 +53,13 @@ brownSetter.addEventListener("click", function () {
 greenSetter.addEventListener("click", function () {
   greenSetterNumber--;
   greenSetter.textContent = greenSetterNumber;
+  if (currentPlayer) {
+    greenOneNumber++;
+    greenOne.textContent = greenOneNumber;
+  } else {
+    greenTwoNumber++;
+    greenTwo.textContent = greenTwoNumber;
+  }
 });
 
 silverSetter.addEventListener("click", function () {
