@@ -6,6 +6,14 @@ let playerTwo;
 let currentCounter = 0;
 let brownCounter = 0;
 let brown = 7;
+let greenCounter = 0;
+let green = 7;
+let silverCounter = 0;
+let silver = 7;
+let blueCounter = 0;
+let blue = 7;
+let redCounter = 0;
+let red = 7;
 playerOne = currentPlayer;
 const confirmButton = document.getElementById("confirm-button");
 const brownSetter = document.getElementById("brown-setter");
@@ -45,6 +53,7 @@ confirmButton.addEventListener("click", function () {
   currentPlayer = !currentPlayer;
   currentCounter = 0;
   brownCounter = 0;
+  greenCounter = 0;
   if (!currentPlayer) {
     playerOneSection.classList.remove("active-player");
     playerTwoSection.classList.add("active-player");
@@ -73,15 +82,20 @@ brownSetter.addEventListener("click", function () {
 });
 
 greenSetter.addEventListener("click", function () {
-  greenSetterNumber--;
-  greenSetter.textContent = greenSetterNumber;
-  if (currentPlayer) {
-    greenOneNumber++;
-    greenOne.textContent = greenOneNumber;
-  } else {
-    greenTwoNumber++;
-    greenTwo.textContent = greenTwoNumber;
+  if ((currentCounter < 3 && greenCounter < 1 && green > -1) || green > 3) {
+    greenSetterNumber--;
+    greenSetter.textContent = greenSetterNumber;
+    if (currentPlayer) {
+      greenOneNumber++;
+      greenOne.textContent = greenOneNumber;
+    } else {
+      greenTwoNumber++;
+      greenTwo.textContent = greenTwoNumber;
+    }
   }
+  currentCounter++;
+  greenCounter++;
+  green--;
 });
 
 silverSetter.addEventListener("click", function () {
