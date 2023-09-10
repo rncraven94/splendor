@@ -67,7 +67,7 @@ brownSetter.addEventListener("click", function () {
   if ((currentCounter < 3 && brownCounter < 1 && brown > -1) || brown > 3) {
     brownSetterNumber--;
     brownSetter.textContent = brownSetterNumber;
-    console.log(currentCounter, brownCounter);
+    console.log(currentCounter, brownCounter, brown);
     if (currentPlayer) {
       brownOneNumber++;
       brownOne.textContent = brownOneNumber;
