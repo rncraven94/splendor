@@ -25,6 +25,10 @@ const greenOne = document.getElementById("player-one-green");
 let greenOneNumber = 0;
 const greenTwo = document.getElementById("player-two-green");
 let greenTwoNumber = 0;
+const silverOne = document.getElementById("player-one-silver");
+let silverOneNumber = 0;
+const silverTwo = document.getElementById("player-two-silver");
+let silverTwoNumber = 0;
 
 confirmButton.addEventListener("click", function () {
   currentPlayer = !currentPlayer;
