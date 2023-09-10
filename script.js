@@ -29,6 +29,14 @@ const silverOne = document.getElementById("player-one-silver");
 let silverOneNumber = 0;
 const silverTwo = document.getElementById("player-two-silver");
 let silverTwoNumber = 0;
+const blueOne = document.getElementById("player-one-blue");
+let blueOneNumber = 0;
+const blueTwo = document.getElementById("player-two-blue");
+let blueTwoNumber = 0;
+const redOne = document.getElementById("player-one-red");
+let redOneNumber = 0;
+const redTwo = document.getElementById("player-two-red");
+let redTwoNumber = 0;
 
 confirmButton.addEventListener("click", function () {
   currentPlayer = !currentPlayer;
