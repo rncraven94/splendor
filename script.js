@@ -3,6 +3,7 @@ use: "strict";
 let currentPlayer = true;
 let playerOne;
 let playerTwo;
+let currentCounter = 0;
 playerOne = currentPlayer;
 const confirmButton = document.getElementById("confirm-button");
 const brownSetter = document.getElementById("brown-setter");
@@ -51,15 +52,18 @@ confirmButton.addEventListener("click", function () {
 });
 
 brownSetter.addEventListener("click", function () {
-  brownSetterNumber--;
-  brownSetter.textContent = brownSetterNumber;
-  if (currentPlayer) {
-    brownOneNumber++;
-    brownOne.textContent = brownOneNumber;
-  } else {
-    brownTwoNumber++;
-    brownTwo.textContent = brownTwoNumber;
+  if (currentCounter < 3) {
+    brownSetterNumber--;
+    brownSetter.textContent = brownSetterNumber;
+    if (currentPlayer) {
+      brownOneNumber++;
+      brownOne.textContent = brownOneNumber;
+    } else {
+      brownTwoNumber++;
+      brownTwo.textContent = brownTwoNumber;
+    }
   }
+  currentCounter++;
 });
 
 greenSetter.addEventListener("click", function () {
