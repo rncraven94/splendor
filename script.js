@@ -4,6 +4,8 @@ let currentPlayer = true;
 let playerOne;
 let playerTwo;
 let currentCounter = 0;
+let brownCounter = 0;
+let brown = 7;
 playerOne = currentPlayer;
 const confirmButton = document.getElementById("confirm-button");
 const brownSetter = document.getElementById("brown-setter");
@@ -41,7 +43,8 @@ let redTwoNumber = 0;
 
 confirmButton.addEventListener("click", function () {
   currentPlayer = !currentPlayer;
-
+  currentCounter = 0;
+  brownCounter = 0;
   if (!currentPlayer) {
     playerOneSection.classList.remove("active-player");
     playerTwoSection.classList.add("active-player");
@@ -52,9 +55,10 @@ confirmButton.addEventListener("click", function () {
 });
 
 brownSetter.addEventListener("click", function () {
-  if (currentCounter < 3) {
+  if ((currentCounter < 3 && brownCounter < 1 && brown > -1) || brown > 3) {
     brownSetterNumber--;
     brownSetter.textContent = brownSetterNumber;
+    console.log(currentCounter, brownCounter);
     if (currentPlayer) {
       brownOneNumber++;
       brownOne.textContent = brownOneNumber;
@@ -64,6 +68,8 @@ brownSetter.addEventListener("click", function () {
     }
   }
   currentCounter++;
+  brownCounter++;
+  brown--;
 });
 
 greenSetter.addEventListener("click", function () {
