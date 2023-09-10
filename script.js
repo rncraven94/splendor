@@ -77,13 +77,34 @@ greenSetter.addEventListener("click", function () {
 silverSetter.addEventListener("click", function () {
   silverSetterNumber--;
   silverSetter.textContent = silverSetterNumber;
+  if (currentPlayer) {
+    silverOneNumber++;
+    silverOne.textContent = silverOneNumber;
+  } else {
+    silverTwoNumber++;
+    silverTwo.textContent = silverTwoNumber;
+  }
 });
 
 blueSetter.addEventListener("click", function () {
   blueSetterNumber--;
   blueSetter.textContent = blueSetterNumber;
+  if (currentPlayer) {
+    blueOneNumber++;
+    blueOne.textContent = blueOneNumber;
+  } else {
+    blueTwoNumber++;
+    blueTwo.textContent = blueTwoNumber;
+  }
 });
 redSetter.addEventListener("click", function () {
   redSetterNumber--;
   redSetter.textContent = redSetterNumber;
+  if (currentPlayer) {
+    redOneNumber++;
+    redOne.textContent = redOneNumber;
+  } else {
+    redTwoNumber++;
+    redTwo.textContent = redTwoNumber;
+  }
 });
