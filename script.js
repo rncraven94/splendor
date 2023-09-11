@@ -64,21 +64,23 @@ confirmButton.addEventListener("click", function () {
 });
 
 brownSetter.addEventListener("click", function () {
-  if ((currentCounter < 3 && brownCounter < 1 && brown > -1) || brown > 3) {
-    brownSetterNumber--;
-    brownSetter.textContent = brownSetterNumber;
-    console.log(currentCounter, brownCounter, brown);
-    if (currentPlayer) {
-      brownOneNumber++;
-      brownOne.textContent = brownOneNumber;
-    } else {
-      brownTwoNumber++;
-      brownTwo.textContent = brownTwoNumber;
+  if (currentCounter <= 3 && brownCounter < 2 && brown >= 1) {
+    if (brownCounter <= 1) {
+      brownSetterNumber--;
+      brownSetter.textContent = brownSetterNumber;
+      currentCounter++;
+      brownCounter++;
+      brown--;
+      console.log(currentCounter, brownCounter, brown);
+      if (currentPlayer) {
+        brownOneNumber++;
+        brownOne.textContent = brownOneNumber;
+      } else {
+        brownTwoNumber++;
+        brownTwo.textContent = brownTwoNumber;
+      }
     }
   }
-  currentCounter++;
-  brownCounter++;
-  brown--;
 });
 
 greenSetter.addEventListener("click", function () {
