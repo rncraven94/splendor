@@ -72,7 +72,7 @@ brownSetter.addEventListener("click", function () {
       if (
         currentCounter -
           (greenCounter + silverCounter + blueCounter + redCounter) >=
-        0
+        -1
       ) {
         brownSetterNumber--;
         brownSetter.textContent = brownSetterNumber;
@@ -98,7 +98,7 @@ greenSetter.addEventListener("click", function () {
       if (
         currentCounter -
           (brownCounter + silverCounter + blueCounter + redCounter) >=
-        0
+        -1
       ) {
         greenSetterNumber--;
         currentCounter++;
@@ -123,7 +123,7 @@ silverSetter.addEventListener("click", function () {
       if (
         currentCounter -
           (brownCounter + greenCounter + blueCounter + redCounter) >=
-        0
+        -1
       ) {
         silverSetterNumber--;
         currentCounter++;
@@ -144,13 +144,11 @@ silverSetter.addEventListener("click", function () {
 
 blueSetter.addEventListener("click", function () {
   if (currentCounter < 3 && blueCounter < 2 && blue >= 1) {
-    if (blue > 3 || currentCounter < 2) {
+    if (blueCounter <= 1 && currentCounter < 2) {
       if (
-        (brownCounter <= 1 ||
-          greenCounter <= 1 ||
-          silverCounter <= 1 ||
-          redCounter <= 1) &&
-        blueCounter < 1
+        currentCounter -
+          (brownCounter + greenCounter + silverCounter + redCounter) >=
+        -1
       ) {
         blueSetterNumber--;
         currentCounter++;
@@ -170,13 +168,11 @@ blueSetter.addEventListener("click", function () {
 });
 redSetter.addEventListener("click", function () {
   if (currentCounter < 3 && redCounter < 2 && red >= 1) {
-    if (red > 3 || currentCounter < 2) {
+    if (redCounter <= 1 && currentCounter < 2) {
       if (
-        (brownCounter <= 1 ||
-          greenCounter <= 1 ||
-          silverCounter <= 1 ||
-          blueCounter <= 1) &&
-        redCounter < 1
+        currentCounter -
+          (brownCounter + greenCounter + silverCounter + blueCounter) >=
+        -1
       ) {
         redSetterNumber--;
         currentCounter++;
