@@ -156,11 +156,15 @@ silverSetter.addEventListener("click", function () {
 
 blueSetter.addEventListener("click", function () {
   if (currentCounter < 3 && blueCounter < 2 && blue >= 1) {
-    if (blueCounter <= 1 && currentCounter < 2) {
+    if (
+      (blue > 3 && currentCounter < 2) ||
+      (currentCounter <= 2 && blueCounter < 1)
+    ) {
       if (
-        currentCounter -
-          (brownCounter + greenCounter + silverCounter + redCounter) >=
-        -1
+        brownCounter < 2 &&
+        greenCounter < 2 &&
+        silverCounter < 2 &&
+        redCounter < 2
       ) {
         blueSetterNumber--;
         currentCounter++;
@@ -180,11 +184,15 @@ blueSetter.addEventListener("click", function () {
 });
 redSetter.addEventListener("click", function () {
   if (currentCounter < 3 && redCounter < 2 && red >= 1) {
-    if (redCounter <= 1 && currentCounter < 2) {
+    if (
+      (red > 3 && currentCounter < 2) ||
+      (currentCounter <= 2 && redCounter < 1)
+    ) {
       if (
-        currentCounter -
-          (brownCounter + greenCounter + silverCounter + blueCounter) >=
-        -1
+        brownCounter < 2 &&
+        greenCounter < 2 &&
+        silverCounter < 2 &&
+        blueCounter < 2
       ) {
         redSetterNumber--;
         currentCounter++;
