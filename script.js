@@ -72,18 +72,25 @@ brownSetter.addEventListener("click", function () {
       (brown > 3 && currentCounter < 2) ||
       (currentCounter <= 2 && brownCounter < 1)
     ) {
-      brownSetterNumber--;
-      brownSetter.textContent = brownSetterNumber;
-      currentCounter++;
-      brownCounter++;
-      brown--;
-      console.log(currentCounter, brownCounter, brown);
-      if (currentPlayer) {
-        brownOneNumber++;
-        brownOne.textContent = brownOneNumber;
-      } else {
-        brownTwoNumber++;
-        brownTwo.textContent = brownTwoNumber;
+      if (
+        silverCounter < 2 &&
+        greenCounter < 2 &&
+        blueCounter < 2 &&
+        redCounter < 2
+      ) {
+        brownSetterNumber--;
+        brownSetter.textContent = brownSetterNumber;
+        currentCounter++;
+        brownCounter++;
+        brown--;
+        console.log(currentCounter, brownCounter, brown);
+        if (currentPlayer) {
+          brownOneNumber++;
+          brownOne.textContent = brownOneNumber;
+        } else {
+          brownTwoNumber++;
+          brownTwo.textContent = brownTwoNumber;
+        }
       }
     }
   }
@@ -95,17 +102,24 @@ greenSetter.addEventListener("click", function () {
       (green > 3 && currentCounter < 2) ||
       (currentCounter <= 2 && greenCounter < 1)
     ) {
-      greenSetterNumber--;
-      currentCounter++;
-      greenCounter++;
-      green--;
-      greenSetter.textContent = greenSetterNumber;
-      if (currentPlayer) {
-        greenOneNumber++;
-        greenOne.textContent = greenOneNumber;
-      } else {
-        greenTwoNumber++;
-        greenTwo.textContent = greenTwoNumber;
+      if (
+        brownCounter < 2 &&
+        silverCounter < 2 &&
+        blueCounter < 2 &&
+        redCounter < 2
+      ) {
+        greenSetterNumber--;
+        currentCounter++;
+        greenCounter++;
+        green--;
+        greenSetter.textContent = greenSetterNumber;
+        if (currentPlayer) {
+          greenOneNumber++;
+          greenOne.textContent = greenOneNumber;
+        } else {
+          greenTwoNumber++;
+          greenTwo.textContent = greenTwoNumber;
+        }
       }
     }
   }
