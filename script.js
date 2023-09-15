@@ -68,25 +68,22 @@ confirmButton.addEventListener("click", function () {
 
 brownSetter.addEventListener("click", function () {
   if (currentCounter < 3 && brownCounter < 2 && brown >= 1) {
-    if (brownCounter <= 1 && currentCounter < 2) {
-      if (
-        currentCounter -
-          (greenCounter + silverCounter + blueCounter + redCounter) >=
-        -1
-      ) {
-        brownSetterNumber--;
-        brownSetter.textContent = brownSetterNumber;
-        currentCounter++;
-        brownCounter++;
-        brown--;
-        console.log(currentCounter, brownCounter, brown);
-        if (currentPlayer) {
-          brownOneNumber++;
-          brownOne.textContent = brownOneNumber;
-        } else {
-          brownTwoNumber++;
-          brownTwo.textContent = brownTwoNumber;
-        }
+    if (
+      (brown > 3 && currentCounter < 2) ||
+      (currentCounter <= 2 && brownCounter < 1)
+    ) {
+      brownSetterNumber--;
+      brownSetter.textContent = brownSetterNumber;
+      currentCounter++;
+      brownCounter++;
+      brown--;
+      console.log(currentCounter, brownCounter, brown);
+      if (currentPlayer) {
+        brownOneNumber++;
+        brownOne.textContent = brownOneNumber;
+      } else {
+        brownTwoNumber++;
+        brownTwo.textContent = brownTwoNumber;
       }
     }
   }
@@ -94,24 +91,21 @@ brownSetter.addEventListener("click", function () {
 
 greenSetter.addEventListener("click", function () {
   if (currentCounter < 3 && greenCounter < 2 && green >= 1) {
-    if (greenCounter <= 1 && currentCounter < 2) {
-      if (
-        currentCounter -
-          (brownCounter + silverCounter + blueCounter + redCounter) >=
-        -1
-      ) {
-        greenSetterNumber--;
-        currentCounter++;
-        greenCounter++;
-        green--;
-        greenSetter.textContent = greenSetterNumber;
-        if (currentPlayer) {
-          greenOneNumber++;
-          greenOne.textContent = greenOneNumber;
-        } else {
-          greenTwoNumber++;
-          greenTwo.textContent = greenTwoNumber;
-        }
+    if (
+      (green > 3 && currentCounter < 2) ||
+      (currentCounter <= 2 && greenCounter < 1)
+    ) {
+      greenSetterNumber--;
+      currentCounter++;
+      greenCounter++;
+      green--;
+      greenSetter.textContent = greenSetterNumber;
+      if (currentPlayer) {
+        greenOneNumber++;
+        greenOne.textContent = greenOneNumber;
+      } else {
+        greenTwoNumber++;
+        greenTwo.textContent = greenTwoNumber;
       }
     }
   }
@@ -119,24 +113,21 @@ greenSetter.addEventListener("click", function () {
 
 silverSetter.addEventListener("click", function () {
   if (currentCounter < 3 && silverCounter < 2 && silver >= 1) {
-    if (silverCounter <= 1 && currentCounter < 2) {
-      if (
-        currentCounter -
-          (brownCounter + greenCounter + blueCounter + redCounter) >=
-        -1
-      ) {
-        silverSetterNumber--;
-        currentCounter++;
-        silverCounter++;
-        silver--;
-        silverSetter.textContent = silverSetterNumber;
-        if (currentPlayer) {
-          silverOneNumber++;
-          silverOne.textContent = silverOneNumber;
-        } else {
-          silverTwoNumber++;
-          silverTwo.textContent = silverTwoNumber;
-        }
+    if (
+      (silver > 3 && currentCounter < 2) ||
+      (currentCounter <= 2 && silverCounter < 1)
+    ) {
+      silverSetterNumber--;
+      currentCounter++;
+      silverCounter++;
+      silver--;
+      silverSetter.textContent = silverSetterNumber;
+      if (currentPlayer) {
+        silverOneNumber++;
+        silverOne.textContent = silverOneNumber;
+      } else {
+        silverTwoNumber++;
+        silverTwo.textContent = silverTwoNumber;
       }
     }
   }
