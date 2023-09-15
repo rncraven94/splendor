@@ -117,17 +117,24 @@ silverSetter.addEventListener("click", function () {
       (silver > 3 && currentCounter < 2) ||
       (currentCounter <= 2 && silverCounter < 1)
     ) {
-      silverSetterNumber--;
-      currentCounter++;
-      silverCounter++;
-      silver--;
-      silverSetter.textContent = silverSetterNumber;
-      if (currentPlayer) {
-        silverOneNumber++;
-        silverOne.textContent = silverOneNumber;
-      } else {
-        silverTwoNumber++;
-        silverTwo.textContent = silverTwoNumber;
+      if (
+        brownCounter < 2 &&
+        greenCounter < 2 &&
+        blueCounter < 2 &&
+        redCounter < 2
+      ) {
+        silverSetterNumber--;
+        currentCounter++;
+        silverCounter++;
+        silver--;
+        silverSetter.textContent = silverSetterNumber;
+        if (currentPlayer) {
+          silverOneNumber++;
+          silverOne.textContent = silverOneNumber;
+        } else {
+          silverTwoNumber++;
+          silverTwo.textContent = silverTwoNumber;
+        }
       }
     }
   }
