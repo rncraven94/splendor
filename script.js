@@ -15,6 +15,7 @@ let blue = 7;
 let redCounter = 0;
 let red = 7;
 playerOne = currentPlayer;
+const newGameButton = document.getElementById("new-game");
 const confirmButton = document.getElementById("confirm-button");
 const brownSetter = document.getElementById("brown-setter");
 const playerOneSection = document.getElementById("player-one");
@@ -64,6 +65,12 @@ confirmButton.addEventListener("click", function () {
     playerOneSection.classList.add("active-player");
     playerTwoSection.classList.remove("active-player");
   }
+});
+
+newGameButton.addEventListener("click", function () {
+  currentPlayer = playerOne;
+  playerOneSection.classList.add("active-player");
+  playerTwoSection.classList.remove("active-player");
 });
 
 brownSetter.addEventListener("click", function () {
