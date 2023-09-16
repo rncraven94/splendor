@@ -71,6 +71,18 @@ newGameButton.addEventListener("click", function () {
   currentPlayer = playerOne;
   playerOneSection.classList.add("active-player");
   playerTwoSection.classList.remove("active-player");
+  currentCounter = 0;
+  brownCounter = 0;
+  brownSetterNumber = 7;
+  brownSetter.textContent = brownSetterNumber;
+  brown = 7;
+  brownOneNumber = 0;
+  brownTwoNumber = 0;
+
+  greenCounter = 0;
+  silverCounter = 0;
+  blueCounter = 0;
+  redCounter = 0;
 });
 
 brownSetter.addEventListener("click", function () {
