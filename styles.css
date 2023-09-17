@@ -3,6 +3,7 @@
 .player-two {
   font-size: 2.4rem;
   border: 1px solid black;
+  max-width: 20rem;
 }
 .brown-setter,
 .player-one-brown,
