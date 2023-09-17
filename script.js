@@ -102,7 +102,15 @@ newGameButton.addEventListener("click", function () {
   silverOne.textContent = silverOneNumber;
   silverTwo.textContent = silverTwoNumber;
 
+  //blue section
   blueCounter = 0;
+  blueSetterNumber = 7;
+  blueSetter.textContent = blueSetterNumber;
+  blue = 7;
+  blueOneNumber = 0;
+  blueTwoNumber = 0;
+  blueOne.textContent = blueOneNumber;
+  blueTwo.textContent = blueTwoNumber;
   redCounter = 0;
 });
 
