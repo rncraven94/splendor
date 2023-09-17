@@ -83,7 +83,9 @@ undoButton.addEventListener("click", function () {
   silverSetter.textContent = silverSetterNumber;
   silver = silver + silverCounter;
   //blue section
-  si;
+  blueSetterNumber = blueSetterNumber + blueCounter;
+  blueSetter.textContent = blueSetterNumber;
+  blue = blue + blueCounter;
   if (currentPlayer) {
     //brown section
     brownOneNumber = brownOneNumber - brownCounter;
@@ -97,6 +99,10 @@ undoButton.addEventListener("click", function () {
     silverOneNumber = silverOneNumber - silverCounter;
     silverOne.textContent = silverOneNumber;
     silverCounter = 0;
+    //blue section
+    blueOneNumber = blueOneNumber - blueCounter;
+    blueOne.textContent = blueOneNumber;
+    blueCounter = 0;
   }
 });
 
