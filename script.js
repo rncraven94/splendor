@@ -1,4 +1,7 @@
 use: "strict";
+import cardsLevelOne from "./cards";
+import cardsLevelTwo from "./cards";
+import cardsLevelThree from "./cards";
 
 let currentPlayer = true;
 let playerOne;
