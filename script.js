@@ -86,6 +86,10 @@ undoButton.addEventListener("click", function () {
   blueSetterNumber = blueSetterNumber + blueCounter;
   blueSetter.textContent = blueSetterNumber;
   blue = blue + blueCounter;
+  //red section
+  redSetterNumber = redSetterNumber + redCounter;
+  redSetter.textContent = redSetterNumber;
+  red = red + redCounter;
   if (currentPlayer) {
     //brown section
     brownOneNumber = brownOneNumber - brownCounter;
@@ -103,6 +107,31 @@ undoButton.addEventListener("click", function () {
     blueOneNumber = blueOneNumber - blueCounter;
     blueOne.textContent = blueOneNumber;
     blueCounter = 0;
+    //red section
+    redOneNumber = redOneNumber - redCounter;
+    redOne.textContent = redOneNumber;
+    redCounter = 0;
+  } else {
+    //brown section
+    brownTwoNumber = brownTwoNumber - brownCounter;
+    brownTwo.textContent = brownTwoNumber;
+    brownCounter = 0;
+    //green section
+    greenTwoNumber = greenTwoNumber - greenCounter;
+    greenTwo.textContent = greenTwoNumber;
+    greenCounter = 0;
+    //silver section
+    silverTwoNumber = silverTwoNumber - silverCounter;
+    silverTwo.textContent = silverTwoNumber;
+    silverCounter = 0;
+    //blue section
+    blueTwoNumber = blueTwoNumber - blueCounter;
+    blueTwo.textContent = blueTwoNumber;
+    blueCounter = 0;
+    //red section
+    redTwoNumber = redTwoNumber - redCounter;
+    redTwo.textContent = redTwoNumber;
+    redCounter = 0;
   }
 });
 
