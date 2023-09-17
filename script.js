@@ -16,6 +16,7 @@ let redCounter = 0;
 let red = 7;
 playerOne = currentPlayer;
 const newGameButton = document.getElementById("new-game");
+const undoButton = document.getElementById("undo-button");
 const confirmButton = document.getElementById("confirm-button");
 const brownSetter = document.getElementById("brown-setter");
 const playerOneSection = document.getElementById("player-one");
@@ -67,6 +68,36 @@ confirmButton.addEventListener("click", function () {
   }
 });
 
+undoButton.addEventListener("click", function () {
+  currentCounter = 0;
+  //brown section
+  brownSetterNumber = brownSetterNumber + brownCounter;
+  brownSetter.textContent = brownSetterNumber;
+  brown = brown + brownCounter;
+  //green section
+  greenSetterNumber = greenSetterNumber + greenCounter;
+  greenSetter.textContent = greenSetterNumber;
+  green = green + greenCounter;
+  //silver section
+  silverSetterNumber = silverSetterNumber + silverCounter;
+  silverSetter.textContent = silverSetterNumber;
+  silver = silver + silverCounter;
+  if (currentPlayer) {
+    //brown section
+    brownOneNumber = brownOneNumber - brownCounter;
+    brownOne.textContent = brownOneNumber;
+    brownCounter = 0;
+    //green section
+    greenOneNumber = greenOneNumber - greenCounter;
+    greenOne.textContent = greenOneNumber;
+    greenCounter = 0;
+    //silver section
+    silverOneNumber = silverOneNumber - silverCounter;
+    silverOne.textContent = silverOneNumber;
+    silverCounter = 0;
+  }
+});
+
 newGameButton.addEventListener("click", function () {
   currentPlayer = playerOne;
   playerOneSection.classList.add("active-player");
@@ -111,7 +142,16 @@ newGameButton.addEventListener("click", function () {
   blueTwoNumber = 0;
   blueOne.textContent = blueOneNumber;
   blueTwo.textContent = blueTwoNumber;
+
+  //red section
   redCounter = 0;
+  redSetterNumber = 7;
+  redSetter.textContent = redSetterNumber;
+  red = 7;
+  redOneNumber = 0;
+  redTwoNumber = 0;
+  redOne.textContent = redOneNumber;
+  redTwo.textContent = redTwoNumber;
 });
 
 brownSetter.addEventListener("click", function () {
