@@ -72,14 +72,25 @@ newGameButton.addEventListener("click", function () {
   playerOneSection.classList.add("active-player");
   playerTwoSection.classList.remove("active-player");
   currentCounter = 0;
+  //brown section
   brownCounter = 0;
   brownSetterNumber = 7;
   brownSetter.textContent = brownSetterNumber;
   brown = 7;
   brownOneNumber = 0;
   brownTwoNumber = 0;
+  brownOne.textContent = brownOneNumber;
+  brownTwo.textContent = brownTwoNumber;
 
+  //green section
   greenCounter = 0;
+  greenSetterNumber = 7;
+  greenSetter.textContent = greenSetterNumber;
+  green = 7;
+  greenOneNumber = 0;
+  greenTwoNumber = 0;
+  greenOne.textContent = greenOneNumber;
+  greenTwo.textContent = greenTwoNumber;
   silverCounter = 0;
   blueCounter = 0;
   redCounter = 0;
