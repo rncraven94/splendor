@@ -82,6 +82,8 @@ undoButton.addEventListener("click", function () {
   silverSetterNumber = silverSetterNumber + silverCounter;
   silverSetter.textContent = silverSetterNumber;
   silver = silver + silverCounter;
+  //blue section
+  si;
   if (currentPlayer) {
     //brown section
     brownOneNumber = brownOneNumber - brownCounter;
