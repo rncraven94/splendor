@@ -44,5 +44,15 @@ let card4 = {
   silver: 0,
 };
 cardsLevelOne.push(card4);
+let card5 = {
+  mainColor: "brown",
+  pointValue: 0,
+  brown: 0,
+  blue: 0,
+  green: 2,
+  red: 1,
+  silver: 0,
+};
+cardsLevelOne.push(card5);
 
-export default cardsLevelOne && cardsLevelTwo && cardsLevelThree;
+export default cardsLevelOne;

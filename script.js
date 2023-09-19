@@ -1,7 +1,7 @@
 use: "strict";
-import cardsLevelOne from "./cards";
-import cardsLevelTwo from "./cards";
-import cardsLevelThree from "./cards";
+import cardsLevelOne from "./cards.js";
+// import cardsLevelTwo from "./cards";
+// import cardsLevelThree from "./cards";
 
 let currentPlayer = true;
 let playerOne;
@@ -193,6 +193,18 @@ newGameButton.addEventListener("click", function () {
   redOne.textContent = redOneNumber;
   redTwo.textContent = redTwoNumber;
 });
+
+//loading the dom with random cards of the three levels
+
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+}
+
+shuffleArray(cardsLevelOne);
+console.log(cardsLevelOne);
 
 brownSetter.addEventListener("click", function () {
   if (currentCounter < 3 && brownCounter < 2 && brown >= 1) {
