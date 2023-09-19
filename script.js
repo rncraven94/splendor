@@ -206,6 +206,28 @@ function shuffleArray(array) {
 shuffleArray(cardsLevelOne);
 console.log(cardsLevelOne);
 
+let visibleRow1 = cardsLevelOne.slice(0, 4);
+
+//display row one
+function displayCards1(cards) {
+  const cardContainer = document.getElementById("card-container");
+  cardContainer.innerHTML = ""; //clear existing cards
+
+  cards.forEach((card, index) => {
+    const cardElement = document.createElement("div");
+    cardElement.classList.add("card");
+    cardElement.innerHTML = `<h2>Card ${index + 1}</h2> <p>${card.mainColor}</p>
+    <p>${card.pointValue}</p> <p>Brown: ${card.brown}</p> <p>Green: ${
+      card.green
+    }</p><p>Silver: ${card.silver}</p> <p>Blue: ${card.blue}</p> <p>Red: ${
+      card.red
+    }</p> <button>Purchase</button>`;
+    cardContainer.appendChild(cardElement);
+  });
+}
+
+displayCards1(visibleRow1);
+
 brownSetter.addEventListener("click", function () {
   if (currentCounter < 3 && brownCounter < 2 && brown >= 1) {
     if (
