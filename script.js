@@ -213,17 +213,23 @@ function displayCards1(cards) {
   const cardContainer = document.getElementById("card-container");
   cardContainer.innerHTML = ""; //clear existing cards
 
+  const cardRow = document.createElement("div");
+  cardRow.classList.add("card-row");
+
   cards.forEach((card, index) => {
     const cardElement = document.createElement("div");
     cardElement.classList.add("card");
-    cardElement.innerHTML = `<h2>Card ${index + 1}</h2> <p>${card.mainColor}</p>
+    cardElement.innerHTML = `<div class="card-box"> <h2>Card ${
+      index + 1
+    }</h2> <p>${card.mainColor}</p>
     <p>${card.pointValue}</p> <p>Brown: ${card.brown}</p> <p>Green: ${
       card.green
     }</p><p>Silver: ${card.silver}</p> <p>Blue: ${card.blue}</p> <p>Red: ${
       card.red
-    }</p> <button>Purchase</button>`;
+    }</p> <button>Purchase</button> </div>`;
     cardContainer.appendChild(cardElement);
   });
+  cardContainer.appendChild(cardRow);
 }
 
 displayCards1(visibleRow1);

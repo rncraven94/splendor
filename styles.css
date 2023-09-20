@@ -35,3 +35,13 @@
 .active-player {
   background-color: #eee;
 }
+
+/* cards */
+.card-row {
+  display: flex;
+}
+
+.card-box {
+  border: 1px solid black;
+  max-width: 12rem;
+}
