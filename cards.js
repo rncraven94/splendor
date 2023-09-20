@@ -74,5 +74,25 @@ let card7 = {
   silver: 0,
 };
 cardsLevelOne.push(card7);
+let card8 = {
+  mainColor: "brown",
+  pointValue: 1,
+  brown: 0,
+  blue: 4,
+  green: 0,
+  red: 0,
+  silver: 0,
+};
+cardsLevelOne.push(card8);
+let card9 = {
+  mainColor: "blue",
+  pointValue: 0,
+  brown: 1,
+  blue: 0,
+  green: 1,
+  red: 1,
+  silver: 1,
+};
+cardsLevelOne.push(card9);
 
 export default cardsLevelOne;
