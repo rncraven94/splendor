@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .setter-body,
 .player-one,
 .player-two {
@@ -39,9 +45,22 @@
 /* cards */
 .card-row {
   display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  flex-direction: column;
 }
 
 .card-box {
   border: 1px solid black;
   max-width: 12rem;
+  display: flex;
+  flex-direction: column;
+  padding: 3.6rem;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
 }
