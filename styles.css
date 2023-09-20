@@ -64,3 +64,7 @@
   flex-direction: row;
   gap: 2rem;
 }
+
+.brown-box-color {
+  background-color: brown;
+}

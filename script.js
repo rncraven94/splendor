@@ -219,9 +219,9 @@ function displayCards1(cards) {
   cards.forEach((card, index) => {
     const cardElement = document.createElement("div");
     cardElement.classList.add("card");
-    cardElement.innerHTML = `<div class="card-box"> <h2>Card ${
-      index + 1
-    }</h2> <p>${card.mainColor}</p>
+    cardElement.innerHTML = `<div class="card-box ${
+      card.mainColor
+    }-box-color"> <h2>Card ${index + 1}</h2> <p>${card.mainColor}</p>
     <p>${card.pointValue}</p> <p>Brown: ${card.brown}</p> <p>Green: ${
       card.green
     }</p><p>Silver: ${card.silver}</p> <p>Blue: ${card.blue}</p> <p>Red: ${
