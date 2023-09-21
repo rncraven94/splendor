@@ -18,6 +18,7 @@ let blue = 7;
 let redCounter = 0;
 let red = 7;
 playerOne = currentPlayer;
+const purchaseBtn = document.getElementById("purchase-btn");
 const newGameButton = document.getElementById("new-game");
 const undoButton = document.getElementById("undo-button");
 const confirmButton = document.getElementById("confirm-button");
@@ -226,11 +227,13 @@ function displayCards1(cards) {
       card.green
     }</p><p>Silver: ${card.silver}</p> <p>Blue: ${card.blue}</p> <p>Red: ${
       card.red
-    }</p> <button>Purchase</button> </div>`;
+    }</p> <button class="purchase-btn" id="purchase-btn">Purchase</button> </div>`;
     cardContainer.appendChild(cardElement);
   });
   cardContainer.appendChild(cardRow);
 }
+
+//purchasin cards
 
 displayCards1(visibleRow1);
 
