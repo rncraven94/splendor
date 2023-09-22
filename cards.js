@@ -124,4 +124,14 @@ let card12 = {
   silver: 0,
 };
 cardsLevelOne.push(card12);
+let card13 = {
+  mainColor: "blue",
+  pointValue: 0,
+  brown: 2,
+  blue: 0,
+  green: 0,
+  red: 0,
+  silver: 1,
+};
+cardsLevelOne.push(card13);
 export default cardsLevelOne;
