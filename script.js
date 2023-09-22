@@ -231,9 +231,20 @@ function displayCards1(cards) {
     cardContainer.appendChild(cardElement);
   });
   cardContainer.appendChild(cardRow);
+
+  const purchaseBtns = document.querySelectorAll(".purchase-btn");
+  purchaseBtns.forEach((btn) => {
+    btn.addEventListener("click", function () {
+      const cardIndex = this.getAttribute("data-card-index");
+      purchaseCard(cardIndex);
+    });
+  });
 }
 
-//purchasin cards
+function purchaseCard(cardIndex) {
+  if (currentCounter > -1) {
+  }
+}
 
 displayCards1(visibleRow1);
 
