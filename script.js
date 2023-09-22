@@ -210,41 +210,66 @@ console.log(cardsLevelOne);
 let visibleRow1 = cardsLevelOne.slice(0, 4);
 
 //display row one
+
 function displayCards1(cards) {
   const cardContainer = document.getElementById("card-container");
-  cardContainer.innerHTML = ""; //clear existing cards
+  cardContainer.innerHTML = ""; // Clear existing cards
 
   const cardRow = document.createElement("div");
   cardRow.classList.add("card-row");
 
   cards.forEach((card, index) => {
-    const cardElement = document.createElement("div");
-    cardElement.classList.add("card");
-    cardElement.innerHTML = `<div class="card-box ${
-      card.mainColor
-    }-box-color"> <h2>Card ${index + 1}</h2> <p>${card.mainColor}</p>
-    <p>${card.pointValue}</p> <p>Brown: ${card.brown}</p> <p>Green: ${
-      card.green
-    }</p><p>Silver: ${card.silver}</p> <p>Blue: ${card.blue}</p> <p>Red: ${
-      card.red
-    }</p> <button class="purchase-btn" id="purchase-btn">Purchase</button> </div>`;
-    cardContainer.appendChild(cardElement);
+    const cardElement = createCardElement(card, index);
+    cardRow.appendChild(cardElement);
   });
   cardContainer.appendChild(cardRow);
+}
 
-  const purchaseBtns = document.querySelectorAll(".purchase-btn");
-  purchaseBtns.forEach((btn) => {
-    btn.addEventListener("click", function () {
-      const cardIndex = this.getAttribute("data-card-index");
-      purchaseCard(cardIndex);
-    });
+function createCardElement(card, index) {
+  const cardElement = document.createElement("div");
+  cardElement.classList.add("card");
+  cardElement.innerHTML = ` <div class="card-box ${
+    card.mainColor
+  }-box-color"> <h2>Card ${index + 1}</h2> <p>${card.mainColor}</p>
+    <p>${card.pointValue}</p> <p>Brown: ${card.brown}</p> <p>Green: ${
+    card.green
+  }</p><p>Silver: ${card.silver}</p> <p>Blue: ${card.blue}</p> <p>Red: ${
+    card.red
+  }</p> <button class="purchase-btn" data-card-index="${index}">Purchase</button> </div>`;
+
+  const purchaseBtn = cardElement.querySelector(".purchase-btn");
+
+  purchaseBtn.addEventListener("click", function () {
+    const cardIndex = this.getAttribute("data-card-index");
+    purchaseCard(cardIndex);
   });
+
+  return cardElement;
 }
 
 function purchaseCard(cardIndex) {
-  if (currentCounter > -1) {
+  if (cardIndex < 0 || cardIndex >= visibleRow1.length) {
+    console.log("Invalid card index");
+    return;
+  }
+
+  const purchasedCard = visibleRow1.splice(cardIndex, 1)[0];
+
+  if (cardsLevelOne.length > 0) {
+    const newCardData = cardsLevelOne.pop();
+    visibleRow1.push(newCardData);
+
+    // Replace the card in the DOM
+    const cardElement = createCardElement(newCardData, cardIndex);
+    const cardContainer = document.getElementById("card-container");
+    const cardRow = cardContainer.querySelector(".card-row");
+    cardRow.replaceChild(cardElement, cardRow.children[cardIndex]);
+  } else {
+    console.log("No cards left in level one");
   }
 }
+
+// Rest of your code...
 
 displayCards1(visibleRow1);
 
