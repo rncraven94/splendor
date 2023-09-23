@@ -134,4 +134,35 @@ let card13 = {
   silver: 1,
 };
 cardsLevelOne.push(card13);
+let card14 = {
+  mainColor: "blue",
+  pointValue: 0,
+  brown: 2,
+  blue: 0,
+  green: 2,
+  red: 0,
+  silver: 0,
+};
+cardsLevelOne.push(card14);
+let card15 = {
+  mainColor: "blue",
+  pointValue: 0,
+  brown: 3,
+  blue: 0,
+  green: 0,
+  red: 0,
+  silver: 0,
+};
+cardsLevelOne.push(card15);
+let card16 = {
+  mainColor: "blue",
+  pointValue: 1,
+  brown: 0,
+  blue: 0,
+  green: 0,
+  red: 4,
+  silver: 0,
+};
+cardsLevelOne.push(card16);
+
 export default cardsLevelOne;
