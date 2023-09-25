@@ -228,14 +228,8 @@ function displayCards1(cards) {
 function createCardElement(card, index) {
   const cardElement = document.createElement("div");
   cardElement.classList.add("card");
-  cardElement.innerHTML = ` <div class="card-box ${
-    card.mainColor
-  }-box-color"> <h2>Card ${index + 1}</h2> <p>${card.mainColor}</p>
-    <p>${card.pointValue}</p> <p>Brown: ${card.brown}</p> <p>Green: ${
-    card.green
-  }</p><p>Silver: ${card.silver}</p> <p>Blue: ${card.blue}</p> <p>Red: ${
-    card.red
-  }</p> <button class="purchase-btn" data-card-index="${index}">Purchase</button> </div>`;
+  cardElement.innerHTML = ` <div class="card-box ${card.mainColor}-box-color">  <p>${card.mainColor}</p>
+    <p>${card.pointValue}</p> <p>Brown: ${card.brown}</p> <p>Green: ${card.green}</p><p>Silver: ${card.silver}</p> <p>Blue: ${card.blue}</p> <p>Red: ${card.red}</p> <button class="purchase-btn" data-card-index="${index}">Purchase</button> </div>`;
 
   const purchaseBtn = cardElement.querySelector(".purchase-btn");
 

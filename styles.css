@@ -42,12 +42,14 @@
   background-color: #eee;
 }
 
-.player-one {
+.player-one,
+.player-two {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
 
-.player-one-score {
+.player-one-score,
+.player-two-score {
   font-size: 6.4rem;
 }
 
