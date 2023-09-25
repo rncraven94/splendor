@@ -42,6 +42,15 @@
   background-color: #eee;
 }
 
+.player-one {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.player-one-score {
+  font-size: 6.4rem;
+}
+
 /* cards */
 .card-row {
   display: flex;
