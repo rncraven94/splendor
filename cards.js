@@ -29,6 +29,13 @@ let card2 = {
   green: 1,
   red: 1,
   silver: 1,
+  subpoints: {
+    brown: 1,
+    green: 0,
+    silver: 0,
+    blue: 0,
+    red: 0,
+  },
 };
 cardsLevelOne.push(card2);
 let card3 = {
@@ -39,6 +46,13 @@ let card3 = {
   green: 0,
   red: 1,
   silver: 2,
+  subpoints: {
+    brown: 1,
+    green: 0,
+    silver: 0,
+    blue: 0,
+    red: 0,
+  },
 };
 cardsLevelOne.push(card3);
 let card4 = {
@@ -49,6 +63,13 @@ let card4 = {
   green: 1,
   red: 3,
   silver: 0,
+  subpoints: {
+    brown: 1,
+    green: 0,
+    silver: 0,
+    blue: 0,
+    red: 0,
+  },
 };
 cardsLevelOne.push(card4);
 let card5 = {
@@ -59,6 +80,13 @@ let card5 = {
   green: 2,
   red: 1,
   silver: 0,
+  subpoints: {
+    brown: 1,
+    green: 0,
+    silver: 0,
+    blue: 0,
+    red: 0,
+  },
 };
 cardsLevelOne.push(card5);
 let card6 = {
@@ -69,6 +97,13 @@ let card6 = {
   green: 2,
   red: 0,
   silver: 2,
+  subpoints: {
+    brown: 1,
+    green: 0,
+    silver: 0,
+    blue: 0,
+    red: 0,
+  },
 };
 cardsLevelOne.push(card6);
 let card7 = {
@@ -79,6 +114,13 @@ let card7 = {
   green: 3,
   red: 0,
   silver: 0,
+  subpoints: {
+    brown: 1,
+    green: 0,
+    silver: 0,
+    blue: 0,
+    red: 0,
+  },
 };
 cardsLevelOne.push(card7);
 let card8 = {
@@ -89,6 +131,13 @@ let card8 = {
   green: 0,
   red: 0,
   silver: 0,
+  subpoints: {
+    brown: 1,
+    green: 0,
+    silver: 0,
+    blue: 0,
+    red: 0,
+  },
 };
 cardsLevelOne.push(card8);
 let card9 = {
