@@ -148,6 +148,13 @@ let card9 = {
   green: 1,
   red: 1,
   silver: 1,
+  subpoints: {
+    brown: 0,
+    green: 0,
+    silver: 0,
+    blue: 1,
+    red: 0,
+  },
 };
 cardsLevelOne.push(card9);
 let card10 = {
@@ -158,6 +165,13 @@ let card10 = {
   green: 1,
   red: 2,
   silver: 1,
+  subpoints: {
+    brown: 0,
+    green: 0,
+    silver: 0,
+    blue: 1,
+    red: 0,
+  },
 };
 cardsLevelOne.push(card10);
 let card11 = {
@@ -168,6 +182,13 @@ let card11 = {
   green: 2,
   red: 2,
   silver: 1,
+  subpoints: {
+    brown: 0,
+    green: 0,
+    silver: 0,
+    blue: 1,
+    red: 0,
+  },
 };
 cardsLevelOne.push(card11);
 let card12 = {
@@ -178,6 +199,13 @@ let card12 = {
   green: 3,
   red: 1,
   silver: 0,
+  subpoints: {
+    brown: 0,
+    green: 0,
+    silver: 0,
+    blue: 1,
+    red: 0,
+  },
 };
 cardsLevelOne.push(card12);
 let card13 = {
@@ -188,6 +216,13 @@ let card13 = {
   green: 0,
   red: 0,
   silver: 1,
+  subpoints: {
+    brown: 0,
+    green: 0,
+    silver: 0,
+    blue: 1,
+    red: 0,
+  },
 };
 cardsLevelOne.push(card13);
 let card14 = {
@@ -198,6 +233,13 @@ let card14 = {
   green: 2,
   red: 0,
   silver: 0,
+  subpoints: {
+    brown: 0,
+    green: 0,
+    silver: 0,
+    blue: 1,
+    red: 0,
+  },
 };
 cardsLevelOne.push(card14);
 let card15 = {
@@ -208,6 +250,13 @@ let card15 = {
   green: 0,
   red: 0,
   silver: 0,
+  subpoints: {
+    brown: 0,
+    green: 0,
+    silver: 0,
+    blue: 1,
+    red: 0,
+  },
 };
 cardsLevelOne.push(card15);
 let card16 = {
@@ -218,6 +267,13 @@ let card16 = {
   green: 0,
   red: 4,
   silver: 0,
+  subpoints: {
+    brown: 0,
+    green: 0,
+    silver: 0,
+    blue: 1,
+    red: 0,
+  },
 };
 cardsLevelOne.push(card16);
 let card17 = {
@@ -228,6 +284,13 @@ let card17 = {
   green: 1,
   red: 1,
   silver: 0,
+  subpoints: {
+    brown: 0,
+    green: 0,
+    silver: 1,
+    blue: 0,
+    red: 0,
+  },
 };
 cardsLevelOne.push(card17);
 let card18 = {
@@ -238,6 +301,13 @@ let card18 = {
   green: 2,
   red: 1,
   silver: 0,
+  subpoints: {
+    brown: 0,
+    green: 0,
+    silver: 1,
+    blue: 0,
+    red: 0,
+  },
 };
 cardsLevelOne.push(card18);
 export default cardsLevelOne;
