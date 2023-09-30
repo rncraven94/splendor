@@ -207,6 +207,7 @@ function shuffleArray(array) {
 shuffleArray(cardsLevelOne);
 shuffleArray(cardsLevelTwo);
 console.log(cardsLevelOne);
+console.log(cardsLevelTwo);
 
 let visibleRow1 = cardsLevelOne.slice(0, 4);
 let visibleRow2 = cardsLevelTwo.slice(0, 4);
