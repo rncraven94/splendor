@@ -1,7 +1,7 @@
 use: "strict";
 
-let cardsLevelOne = [];
-let cardsLevelTwo = [];
+export const cardsLevelOne = [];
+export const cardsLevelTwo = [];
 let cardsLevelThree = [];
 
 let card1 = {
@@ -684,4 +684,21 @@ let card40 = {
   },
 };
 cardsLevelOne.push(card40);
-export default cardsLevelOne;
+let card41 = {
+  mainColor: "brown",
+  pointValue: 1,
+  brown: 0,
+  blue: 2,
+  green: 2,
+  red: 0,
+  silver: 3,
+  subpoints: {
+    brown: 1,
+    green: 0,
+    silver: 0,
+    blue: 0,
+    red: 1,
+  },
+};
+cardsLevelTwo.push(card41);
+let card42;

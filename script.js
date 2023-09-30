@@ -1,6 +1,6 @@
 use: "strict";
-import cardsLevelOne from "./cards.js";
-// import cardsLevelTwo from "./cards";
+import { cardsLevelOne, cardsLevelTwo } from "./cards.js";
+
 // import cardsLevelThree from "./cards";
 
 let currentPlayer = true;
@@ -205,13 +205,27 @@ function shuffleArray(array) {
 }
 
 shuffleArray(cardsLevelOne);
+shuffleArray(cardsLevelTwo);
 console.log(cardsLevelOne);
 
 let visibleRow1 = cardsLevelOne.slice(0, 4);
-
+let visibleRow2 = cardsLevelTwo.slice(0, 4);
 //display row one
 
 function displayCards1(cards) {
+  const cardContainer = document.getElementById("card-container");
+  cardContainer.innerHTML = ""; // Clear existing cards
+
+  const cardRow = document.createElement("div");
+  cardRow.classList.add("card-row");
+
+  cards.forEach((card, index) => {
+    const cardElement = createCardElement(card, index);
+    cardRow.appendChild(cardElement);
+  });
+  cardContainer.appendChild(cardRow);
+}
+function displayCards2(cards) {
   const cardContainer = document.getElementById("card-container");
   cardContainer.innerHTML = ""; // Clear existing cards
 
@@ -266,6 +280,7 @@ function purchaseCard(cardIndex) {
 // Rest of your code...
 
 displayCards1(visibleRow1);
+displayCards2(visibleRow2);
 
 brownSetter.addEventListener("click", function () {
   if (currentCounter < 3 && brownCounter < 2 && brown >= 1) {
