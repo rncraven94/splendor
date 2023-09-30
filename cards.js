@@ -565,4 +565,123 @@ let card33 = {
   },
 };
 cardsLevelOne.push(card33);
+let card34 = {
+  mainColor: "red",
+  pointValue: 0,
+  brown: 1,
+  blue: 1,
+  green: 1,
+  red: 0,
+  silver: 2,
+  subpoints: {
+    brown: 0,
+    green: 0,
+    silver: 0,
+    blue: 0,
+    red: 1,
+  },
+};
+cardsLevelOne.push(card34);
+let card35 = {
+  mainColor: "red",
+  pointValue: 0,
+  brown: 2,
+  blue: 0,
+  green: 1,
+  red: 0,
+  silver: 2,
+  subpoints: {
+    brown: 0,
+    green: 0,
+    silver: 0,
+    blue: 0,
+    red: 1,
+  },
+};
+cardsLevelOne.push(card35);
+let card36 = {
+  mainColor: "red",
+  pointValue: 0,
+  brown: 3,
+  blue: 0,
+  green: 0,
+  red: 1,
+  silver: 1,
+  subpoints: {
+    brown: 0,
+    green: 0,
+    silver: 0,
+    blue: 0,
+    red: 1,
+  },
+};
+cardsLevelOne.push(card36);
+let card37 = {
+  mainColor: "red",
+  pointValue: 0,
+  brown: 0,
+  blue: 2,
+  green: 1,
+  red: 0,
+  silver: 0,
+  subpoints: {
+    brown: 0,
+    green: 0,
+    silver: 0,
+    blue: 0,
+    red: 1,
+  },
+};
+cardsLevelOne.push(card37);
+let card38 = {
+  mainColor: "red",
+  pointValue: 0,
+  brown: 0,
+  blue: 0,
+  green: 0,
+  red: 2,
+  silver: 2,
+  subpoints: {
+    brown: 0,
+    green: 0,
+    silver: 0,
+    blue: 0,
+    red: 1,
+  },
+};
+cardsLevelOne.push(card38);
+let card39 = {
+  mainColor: "red",
+  pointValue: 0,
+  brown: 0,
+  blue: 0,
+  green: 0,
+  red: 0,
+  silver: 3,
+  subpoints: {
+    brown: 0,
+    green: 0,
+    silver: 0,
+    blue: 0,
+    red: 1,
+  },
+};
+cardsLevelOne.push(card39);
+let card40 = {
+  mainColor: "red",
+  pointValue: 0,
+  brown: 1,
+  blue: 0,
+  green: 0,
+  red: 0,
+  silver: 4,
+  subpoints: {
+    brown: 0,
+    green: 0,
+    silver: 0,
+    blue: 0,
+    red: 1,
+  },
+};
+cardsLevelOne.push(card40);
 export default cardsLevelOne;
