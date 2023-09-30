@@ -991,3 +991,105 @@ let card58 = {
   },
 };
 cardsLevelTwo.push(card58);
+let card59 = {
+  mainColor: "green",
+  pointValue: 1,
+  brown: 0,
+  blue: 0,
+  green: 2,
+  red: 3,
+  silver: 3,
+  subpoints: {
+    brown: 0,
+    green: 1,
+    silver: 0,
+    blue: 0,
+    red: 0,
+  },
+};
+cardsLevelTwo.push(card59);
+let card60 = {
+  mainColor: "green",
+  pointValue: 1,
+  brown: 2,
+  blue: 3,
+  green: 0,
+  red: 0,
+  silver: 2,
+  subpoints: {
+    brown: 0,
+    green: 1,
+    silver: 0,
+    blue: 0,
+    red: 0,
+  },
+};
+cardsLevelTwo.push(card60);
+let card61 = {
+  mainColor: "green",
+  pointValue: 2,
+  brown: 1,
+  blue: 2,
+  green: 0,
+  red: 0,
+  silver: 4,
+  subpoints: {
+    brown: 0,
+    green: 1,
+    silver: 0,
+    blue: 0,
+    red: 0,
+  },
+};
+cardsLevelTwo.push(card61);
+let card62 = {
+  mainColor: "green",
+  pointValue: 2,
+  brown: 0,
+  blue: 5,
+  green: 3,
+  red: 0,
+  silver: 0,
+  subpoints: {
+    brown: 0,
+    green: 1,
+    silver: 0,
+    blue: 0,
+    red: 0,
+  },
+};
+cardsLevelTwo.push(card62);
+let card63 = {
+  mainColor: "green",
+  pointValue: 2,
+  brown: 0,
+  blue: 0,
+  green: 5,
+  red: 0,
+  silver: 0,
+  subpoints: {
+    brown: 0,
+    green: 1,
+    silver: 0,
+    blue: 0,
+    red: 0,
+  },
+};
+cardsLevelTwo.push(card63);
+let card64 = {
+  mainColor: "green",
+  pointValue: 3,
+  brown: 0,
+  blue: 0,
+  green: 6,
+  red: 0,
+  silver: 0,
+  subpoints: {
+    brown: 0,
+    green: 1,
+    silver: 0,
+    blue: 0,
+    red: 0,
+  },
+};
+cardsLevelTwo.push(card64);
