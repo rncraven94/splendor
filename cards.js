@@ -429,4 +429,21 @@ let card25 = {
   },
 };
 cardsLevelOne.push(card25);
+let card26 = {
+  mainColor: "green",
+  pointValue: 0,
+  brown: 2,
+  blue: 1,
+  green: 0,
+  red: 1,
+  silver: 1,
+  subpoints: {
+    brown: 0,
+    green: 1,
+    silver: 0,
+    blue: 0,
+    red: 0,
+  },
+};
+cardsLevelOne.push(card26);
 export default cardsLevelOne;
