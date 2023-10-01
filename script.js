@@ -237,7 +237,7 @@ function purchaseCard(cardIndex, arrayIndex) {
       greenOneNumber = greenOneNumber - cardIndex.green;
       greenSetterNumber = greenSetterNumber + cardIndex.green;
       greenSetter.textContent = greenSetterNumber;
-      greenOneNumber = greenOneNumber + card.index.subpoints.green;
+      greenOneNumber = greenOneNumber + cardIndex.subpoints.green;
       greenOne.textContent = greenOneNumber;
     }
   }
