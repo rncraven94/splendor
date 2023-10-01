@@ -214,77 +214,60 @@ console.log(cardsLevelThree);
 let visibleRow1 = cardsLevelOne.slice(0, 4);
 let visibleRow2 = cardsLevelTwo.slice(0, 4);
 let visibleRow3 = cardsLevelThree.slice(0, 4);
+
+// Define the purchaseCard function first
+function purchaseCard(cardIndex, arrayIndex) {
+  // Your purchaseCard logic here
+  // You can access the appropriate array using arrayIndex (0 or 1)
+}
+
+// Then, call displayAndPurchaseCards
+
 //display row one
-
-function displayCards1(cards) {
+function displayAndPurchaseCards(
+  cards,
+  visibleRow,
+  purchaseCardFunction,
+  maxCards = 4
+) {
   const cardContainer = document.getElementById("card-container");
   cardContainer.innerHTML = ""; // Clear existing cards
 
-  const cardRow = document.createElement("div");
-  cardRow.classList.add("card-row");
+  for (let i = 0; i < cards.length; i++) {
+    const cardRow = document.createElement("div");
+    cardRow.classList.add("card-row");
 
-  cards.forEach((card, index) => {
-    const cardElement = createCardElement(card, index);
-    cardRow.appendChild(cardElement);
-  });
-  cardContainer.appendChild(cardRow);
-}
-function displayCards2(cards) {
-  const cardContainer = document.getElementById("card-container");
-  cardContainer.innerHTML = ""; // Clear existing cards
+    cards[i].slice(0, maxCards).forEach((card, index) => {
+      const cardElement = createCardElement(card, index, purchaseCardFunction);
+      cardRow.appendChild(cardElement);
+    });
 
-  const cardRow = document.createElement("div");
-  cardRow.classList.add("card-row");
-
-  cards.forEach((card, index) => {
-    const cardElement = createCardElement(card, index);
-    cardRow.appendChild(cardElement);
-  });
-  cardContainer.appendChild(cardRow);
-}
-
-function createCardElement(card, index) {
-  const cardElement = document.createElement("div");
-  cardElement.classList.add("card");
-  cardElement.innerHTML = ` <div class="card-box ${card.mainColor}-box-color">  <p>${card.mainColor}</p>
-    <p>${card.pointValue}</p> <p>Brown: ${card.brown}</p> <p>Green: ${card.green}</p><p>Silver: ${card.silver}</p> <p>Blue: ${card.blue}</p> <p>Red: ${card.red}</p> <button class="purchase-btn" data-card-index="${index}">Purchase</button> </div>`;
-
-  const purchaseBtn = cardElement.querySelector(".purchase-btn");
-
-  purchaseBtn.addEventListener("click", function () {
-    const cardIndex = this.getAttribute("data-card-index");
-    purchaseCard(cardIndex);
-  });
-
-  return cardElement;
-}
-
-function purchaseCard(cardIndex) {
-  if (cardIndex < 0 || cardIndex >= visibleRow1.length) {
-    console.log("Invalid card index");
-    return;
+    cardContainer.appendChild(cardRow);
   }
 
-  const purchasedCard = visibleRow1.splice(cardIndex, 1)[0];
+  function createCardElement(card, index, purchaseCardFunction) {
+    const cardElement = document.createElement("div");
+    cardElement.classList.add("card");
+    cardElement.innerHTML = ` <div class="card-box ${card.mainColor}-box-color">  <p>${card.mainColor}</p>
+      <p>${card.pointValue}</p> <p>Brown: ${card.brown}</p> <p>Green: ${card.green}</p><p>Silver: ${card.silver}</p> <p>Blue: ${card.blue}</p> <p>Red: ${card.red}</p> <button class="purchase-btn" data-card-index="${index}">Purchase</button> </div>`;
 
-  if (cardsLevelOne.length > 0) {
-    const newCardData = cardsLevelOne.pop();
-    visibleRow1.push(newCardData);
+    const purchaseBtn = cardElement.querySelector(".purchase-btn");
 
-    // Replace the card in the DOM
-    const cardElement = createCardElement(newCardData, cardIndex);
-    const cardContainer = document.getElementById("card-container");
-    const cardRow = cardContainer.querySelector(".card-row");
-    cardRow.replaceChild(cardElement, cardRow.children[cardIndex]);
-  } else {
-    console.log("No cards left in level one");
+    purchaseBtn.addEventListener("click", function () {
+      const cardIndex = this.getAttribute("data-card-index");
+      purchaseCardFunction(cardIndex, i); // Pass the current array index
+    });
+
+    return cardElement;
   }
 }
 
-// Rest of your code...
-
-displayCards1(visibleRow1);
-displayCards2(visibleRow2);
+// Usage:
+displayAndPurchaseCards(
+  [cardsLevelOne, cardsLevelTwo, cardsLevelThree],
+  [visibleRow1, visibleRow2, visibleRow3],
+  purchaseCard
+);
 
 brownSetter.addEventListener("click", function () {
   if (currentCounter < 3 && brownCounter < 2 && brown >= 1) {
