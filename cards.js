@@ -2,7 +2,7 @@ use: "strict";
 
 export const cardsLevelOne = [];
 export const cardsLevelTwo = [];
-let cardsLevelThree = [];
+export const cardsLevelThree = [];
 
 let card1 = {
   mainColor: "brown",
@@ -1195,3 +1195,87 @@ let card70 = {
   },
 };
 cardsLevelTwo.push(card70);
+let card71 = {
+  mainColor: "brown",
+  pointValue: 3,
+  brown: 0,
+  blue: 3,
+  green: 5,
+  red: 3,
+  silver: 3,
+  subpoints: {
+    brown: 1,
+    green: 0,
+    silver: 0,
+    blue: 0,
+    red: 0,
+  },
+};
+cardsLevelThree.push(card71);
+let card72 = {
+  mainColor: "brown",
+  pointValue: 4,
+  brown: 0,
+  blue: 0,
+  green: 0,
+  red: 7,
+  silver: 0,
+  subpoints: {
+    brown: 1,
+    green: 0,
+    silver: 0,
+    blue: 0,
+    red: 0,
+  },
+};
+cardsLevelThree.push(card72);
+let card73 = {
+  mainColor: "brown",
+  pointValue: 4,
+  brown: 3,
+  blue: 0,
+  green: 3,
+  red: 6,
+  silver: 0,
+  subpoints: {
+    brown: 1,
+    green: 0,
+    silver: 0,
+    blue: 0,
+    red: 0,
+  },
+};
+cardsLevelThree.push(card73);
+let card74 = {
+  mainColor: "brown",
+  pointValue: 5,
+  brown: 3,
+  blue: 0,
+  green: 0,
+  red: 7,
+  silver: 0,
+  subpoints: {
+    brown: 1,
+    green: 0,
+    silver: 0,
+    blue: 0,
+    red: 0,
+  },
+};
+cardsLevelThree.push(card74);
+let card75 = {
+  mainColor: "blue",
+  pointValue: 3,
+  brown: 0,
+  blue: 3,
+  green: 5,
+  red: 3,
+  silver: 3,
+  subpoints: {
+    brown: 1,
+    green: 0,
+    silver: 0,
+    blue: 0,
+    red: 0,
+  },
+};
