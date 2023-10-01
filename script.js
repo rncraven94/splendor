@@ -217,11 +217,23 @@ let visibleRow3 = cardsLevelThree.slice(0, 4);
 
 // Define the purchaseCard function first
 function purchaseCard(cardIndex, arrayIndex) {
-  // Your purchaseCard logic here
-  // You can access the appropriate array using arrayIndex (0 or 1)
+  if ((currentPlayer = true)) {
+    console.log(cardIndex);
+    console.log(cardIndex.brown);
+    if (
+      brownOneNumber >= cardIndex.brown &&
+      greenOneNumber >= cardIndex.green &&
+      silverOneNumber >= cardIndex.silver &&
+      blueOneNumber >= cardIndex.blue &&
+      redOneNumber >= cardIndex.red
+    ) {
+      console.log("hi");
+      brownOneNumber = brownOneNumber - Number(cardIndex.brown);
+      brownOne.textContent = brownOneNumber;
+      console.log(brownOneNumber);
+    }
+  }
 }
-
-// Then, call displayAndPurchaseCards
 
 //display row one
 function displayAndPurchaseCards(
@@ -247,15 +259,18 @@ function displayAndPurchaseCards(
 
   function createCardElement(card, index, purchaseCardFunction) {
     const cardElement = document.createElement("div");
+    const cardName = card;
     cardElement.classList.add("card");
+
     cardElement.innerHTML = ` <div class="card-box ${card.mainColor}-box-color">  <p>${card.mainColor}</p>
-      <p>${card.pointValue}</p> <p>Brown: ${card.brown}</p> <p>Green: ${card.green}</p><p>Silver: ${card.silver}</p> <p>Blue: ${card.blue}</p> <p>Red: ${card.red}</p> <button class="purchase-btn" data-card-index="${index}">Purchase</button> </div>`;
+      <p>${card.pointValue}</p> <p>Brown: ${card.brown}</p> <p>Green: ${card.green}</p><p>Silver: ${card.silver}</p> <p>Blue: ${card.blue}</p> <p>Red: ${card.red}</p> <button class="purchase-btn" data-card-index="${index}"">Purchase</button> </div>`;
 
     const purchaseBtn = cardElement.querySelector(".purchase-btn");
 
     purchaseBtn.addEventListener("click", function () {
-      const cardIndex = this.getAttribute("data-card-index");
-      purchaseCardFunction(cardIndex, i); // Pass the current array index
+      const cardIndex = cardName;
+      const arrayIndex = this.getAttribute("data-array-index");
+      purchaseCardFunction(cardIndex, arrayIndex); // Pass the current array index
     });
 
     return cardElement;
