@@ -227,8 +227,10 @@ function purchaseCard(cardIndex, arrayIndex) {
       blueOneNumber >= cardIndex.blue &&
       redOneNumber >= cardIndex.red
     ) {
-      console.log("hi");
       brownOneNumber = brownOneNumber - Number(cardIndex.brown);
+      brownSetterNumber = brownSetterNumber + cardIndex.brown;
+      brownSetter.textContent = brownSetterNumber;
+      brownOneNumber = brownOneNumber + cardIndex.subpoints.brown;
       brownOne.textContent = brownOneNumber;
     }
   }
