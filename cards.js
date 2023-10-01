@@ -1331,3 +1331,71 @@ let card78 = {
   },
 };
 cardsLevelThree.push(card78);
+let card79 = {
+  mainColor: "silver",
+  pointValue: 3,
+  brown: 3,
+  blue: 3,
+  green: 3,
+  red: 5,
+  silver: 0,
+  subpoints: {
+    brown: 0,
+    green: 0,
+    silver: 1,
+    blue: 0,
+    red: 0,
+  },
+};
+cardsLevelThree.push(card79);
+let card80 = {
+  mainColor: "silver",
+  pointValue: 4,
+  brown: 7,
+  blue: 0,
+  green: 0,
+  red: 0,
+  silver: 0,
+  subpoints: {
+    brown: 0,
+    green: 0,
+    silver: 1,
+    blue: 0,
+    red: 0,
+  },
+};
+cardsLevelThree.push(card80);
+let card81 = {
+  mainColor: "silver",
+  pointValue: 4,
+  brown: 3,
+  blue: 3,
+  green: 0,
+  red: 0,
+  silver: 6,
+  subpoints: {
+    brown: 0,
+    green: 0,
+    silver: 1,
+    blue: 0,
+    red: 0,
+  },
+};
+cardsLevelThree.push(card81);
+let card82 = {
+  mainColor: "silver",
+  pointValue: 5,
+  brown: 7,
+  blue: 0,
+  green: 0,
+  red: 0,
+  silver: 3,
+  subpoints: {
+    brown: 0,
+    green: 0,
+    silver: 1,
+    blue: 0,
+    red: 0,
+  },
+};
+cardsLevelThree.push(card82);
