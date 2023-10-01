@@ -230,7 +230,6 @@ function purchaseCard(cardIndex, arrayIndex) {
       console.log("hi");
       brownOneNumber = brownOneNumber - Number(cardIndex.brown);
       brownOne.textContent = brownOneNumber;
-      console.log(brownOneNumber);
     }
   }
 }
