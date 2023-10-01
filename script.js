@@ -1,5 +1,5 @@
 use: "strict";
-import { cardsLevelOne, cardsLevelTwo } from "./cards.js";
+import { cardsLevelOne, cardsLevelThree, cardsLevelTwo } from "./cards.js";
 
 // import cardsLevelThree from "./cards";
 
@@ -206,11 +206,14 @@ function shuffleArray(array) {
 
 shuffleArray(cardsLevelOne);
 shuffleArray(cardsLevelTwo);
+shuffleArray(cardsLevelThree);
 console.log(cardsLevelOne);
 console.log(cardsLevelTwo);
+console.log(cardsLevelThree);
 
 let visibleRow1 = cardsLevelOne.slice(0, 4);
 let visibleRow2 = cardsLevelTwo.slice(0, 4);
+let visibleRow3 = cardsLevelThree.slice(0, 4);
 //display row one
 
 function displayCards1(cards) {
