@@ -238,6 +238,7 @@ function purchaseCard(cardIndex, arrayIndex) {
         brownOneNumber = brownOneNumber + brownOneSubPoint;
         brownOne.textContent = brownOneNumber;
       } else {
+        brownOneSubPoint = brownOneSubPoint + cardIndex.subpoints.brown;
         brownOneNumber = brownOneNumber + cardIndex.subpoints.brown;
         brownOne.textContent = brownOneNumber;
       }
