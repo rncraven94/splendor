@@ -18,6 +18,7 @@ let blue = 7;
 let redCounter = 0;
 let red = 7;
 let brownOneSubPoint = 0;
+let greenOneSubPoint = 0;
 playerOne = currentPlayer;
 const purchaseBtn = document.getElementById("purchase-btn");
 const newGameButton = document.getElementById("new-game");
@@ -235,19 +236,28 @@ function purchaseCard(cardIndex, arrayIndex) {
         brownSetter.textContent = brownSetterNumber;
 
         brownOneSubPoint = brownOneSubPoint + cardIndex.subpoints.brown;
-        brownOneNumber = brownOneNumber + brownOneSubPoint;
+        brownOneNumber = brownOneNumber + cardIndex.subpoints.brown;
         brownOne.textContent = brownOneNumber;
+        console.log(brownOneSubPoint);
       } else {
         brownOneSubPoint = brownOneSubPoint + cardIndex.subpoints.brown;
         brownOneNumber = brownOneNumber + cardIndex.subpoints.brown;
         brownOne.textContent = brownOneNumber;
+        console.log(brownOneSubPoint);
       }
       //green
-      greenOneNumber = greenOneNumber - cardIndex.green;
-      greenSetterNumber = greenSetterNumber + cardIndex.green;
-      greenSetter.textContent = greenSetterNumber;
-      greenOneNumber = greenOneNumber + cardIndex.subpoints.green;
-      greenOne.textContent = greenOneNumber;
+      if (!greenOneSubPoint >= cardIndex.green) {
+        greenOneNumber = greenOneNumber - cardIndex.green;
+        greenSetterNumber = greenSetterNumber + cardIndex.green;
+        greenSetter.textContent = greenSetterNumber;
+        greenOneSubPoint = greenOneSubPoint + cardIndex.subpoints.green;
+        greenOneNumber = greenOneNumber + cardIndex.subpoints.green;
+        greenOne.textContent = greenOneNumber;
+      } else {
+        greenOneSubPoint = greenOneSubPoint + cardIndex.subpoints.green;
+        greenOneNumber = greenOneNumber + cardIndex.subpoints.green;
+        greenOne.textContent = greenOneNumber;
+      }
     }
   }
 }
