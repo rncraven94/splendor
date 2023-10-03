@@ -269,12 +269,22 @@ function purchaseCard(cardIndex, arrayIndex) {
         silverOneNumber = silverOneNumber + cardIndex.subpoints.silver;
         silverOne.textContent = silverOneNumber;
       } else {
-        greenOneSubPoint = greenOneSubPoint + cardIndex.subpoints.green;
-        greenOneNumber = greenOneNumber + cardIndex.subpoints.green;
-        greenOne.textContent = greenOneNumber;
+        silverOneSubPoint = silverOneSubPoint + cardIndex.subpoints.silver;
+        silverOneNumber = silverOneNumber + cardIndex.subpoints.silver;
+        silverOne.textContent = silverOneNumber;
       }
+      //blue
       if (!blueOneSubPoint >= cardIndex.blue) {
         blueOneNumber = blueOneSubPoint;
+        blueSetterNumber = blueSetterNumber + cardIndex.blue;
+        blueSetter.textContent = blueSetterNumber;
+        blueOneSubPoint = blueOneSubPoint + cardIndex.subpoints.blue;
+        blueOneNumber = blueOneNumber + cardIndex.subpoints.blue;
+        blueOne.textContent = blueOneNumber;
+      } else {
+        blueOneSubPoint = blueOneSubPoint + cardIndex.subpoints.blue;
+        blueOneNumber = blueOneNumber + cardIndex.subpoints.blue;
+        blueOne.textContent = blueOneNumber;
       }
     }
   }
