@@ -21,6 +21,7 @@ let brownOneSubPoint = 0;
 let greenOneSubPoint = 0;
 let silverOneSubPoint = 0;
 let blueOneSubPoint = 0;
+let redOneSubPoint = 0;
 playerOne = currentPlayer;
 const purchaseBtn = document.getElementById("purchase-btn");
 const newGameButton = document.getElementById("new-game");
@@ -232,60 +233,47 @@ function purchaseCard(cardIndex, arrayIndex) {
       redOneNumber >= cardIndex.red
     ) {
       //brown
-      if (!brownOneSubPoint >= cardIndex.brown) {
-        brownOneNumber = brownOneSubPoint;
-        brownSetterNumber = brownSetterNumber + cardIndex.brown;
-        brownSetter.textContent = brownSetterNumber;
 
-        brownOneSubPoint = brownOneSubPoint + cardIndex.subpoints.brown;
-        brownOneNumber = brownOneNumber + cardIndex.subpoints.brown;
-        brownOne.textContent = brownOneNumber;
-        console.log(brownOneSubPoint);
-      } else {
-        brownOneSubPoint = brownOneSubPoint + cardIndex.subpoints.brown;
-        brownOneNumber = brownOneNumber + cardIndex.subpoints.brown;
-        brownOne.textContent = brownOneNumber;
-        console.log(brownOneSubPoint);
-      }
+      brownOneNumber = brownOneSubPoint;
+      brownSetterNumber = brownSetterNumber + cardIndex.brown;
+      brownSetter.textContent = brownSetterNumber;
+
+      brownOneSubPoint = brownOneSubPoint + cardIndex.subpoints.brown;
+      brownOneNumber = brownOneNumber + cardIndex.subpoints.brown;
+      brownOne.textContent = brownOneNumber;
+
       //green
-      if (!greenOneSubPoint >= cardIndex.green) {
-        greenOneNumber = greenOneSubPoint;
-        greenSetterNumber = greenSetterNumber + cardIndex.green;
-        greenSetter.textContent = greenSetterNumber;
-        greenOneSubPoint = greenOneSubPoint + cardIndex.subpoints.green;
-        greenOneNumber = greenOneNumber + cardIndex.subpoints.green;
-        greenOne.textContent = greenOneNumber;
-      } else {
-        greenOneSubPoint = greenOneSubPoint + cardIndex.subpoints.green;
-        greenOneNumber = greenOneNumber + cardIndex.subpoints.green;
-        greenOne.textContent = greenOneNumber;
-      }
+
+      greenOneNumber = greenOneSubPoint;
+      greenSetterNumber = greenSetterNumber + cardIndex.green;
+      greenSetter.textContent = greenSetterNumber;
+      greenOneSubPoint = greenOneSubPoint + cardIndex.subpoints.green;
+      greenOneNumber = greenOneNumber + cardIndex.subpoints.green;
+      greenOne.textContent = greenOneNumber;
+
       //silver
-      if (!silverOneSubPoint >= cardIndex.silver) {
-        silverOneNumber = silverOneSubPoint;
-        silverSetterNumber = silverSetterNumber + cardIndex.silver;
-        silverSetter.textContent = silverSetterNumber;
-        silverOneSubPoint = silverOneSubPoint + cardIndex.subpoints.silver;
-        silverOneNumber = silverOneNumber + cardIndex.subpoints.silver;
-        silverOne.textContent = silverOneNumber;
-      } else {
-        silverOneSubPoint = silverOneSubPoint + cardIndex.subpoints.silver;
-        silverOneNumber = silverOneNumber + cardIndex.subpoints.silver;
-        silverOne.textContent = silverOneNumber;
-      }
+      silverOneNumber = silverOneSubPoint;
+      silverSetterNumber = silverSetterNumber + cardIndex.silver;
+      silverSetter.textContent = silverSetterNumber;
+      silverOneSubPoint = silverOneSubPoint + cardIndex.subpoints.silver;
+      silverOneNumber = silverOneNumber + cardIndex.subpoints.silver;
+      silverOne.textContent = silverOneNumber;
+
       //blue
-      if (!blueOneSubPoint >= cardIndex.blue) {
-        blueOneNumber = blueOneSubPoint;
-        blueSetterNumber = blueSetterNumber + cardIndex.blue;
-        blueSetter.textContent = blueSetterNumber;
-        blueOneSubPoint = blueOneSubPoint + cardIndex.subpoints.blue;
-        blueOneNumber = blueOneNumber + cardIndex.subpoints.blue;
-        blueOne.textContent = blueOneNumber;
-      } else {
-        blueOneSubPoint = blueOneSubPoint + cardIndex.subpoints.blue;
-        blueOneNumber = blueOneNumber + cardIndex.subpoints.blue;
-        blueOne.textContent = blueOneNumber;
-      }
+
+      blueOneNumber = blueOneSubPoint;
+      blueSetterNumber = blueSetterNumber + cardIndex.blue;
+      blueSetter.textContent = blueSetterNumber;
+      blueOneSubPoint = blueOneSubPoint + cardIndex.subpoints.blue;
+      blueOneNumber = blueOneNumber + cardIndex.subpoints.blue;
+      blueOne.textContent = blueOneNumber;
+      //red
+      redOneNumber = redOneSubPoint;
+      redSetterNumber = redSetterNumber + cardIndex.red;
+      redSetter.textContent = redSetterNumber;
+      redOneSubPoint = redOneSubPoint + cardIndex.subpoints.red;
+      redOneNumber = redOneNumber + cardIndex.subpoints.red;
+      redOne.textContent = redOneNumber;
     }
   }
 }
