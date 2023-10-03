@@ -233,7 +233,7 @@ function purchaseCard(cardIndex, arrayIndex) {
     ) {
       //brown
       if (!brownOneSubPoint >= cardIndex.brown) {
-        brownOneNumber = brownOneNumber - cardIndex.brown;
+        brownOneNumber = brownOneSubPoint;
         brownSetterNumber = brownSetterNumber + cardIndex.brown;
         brownSetter.textContent = brownSetterNumber;
 
@@ -249,7 +249,7 @@ function purchaseCard(cardIndex, arrayIndex) {
       }
       //green
       if (!greenOneSubPoint >= cardIndex.green) {
-        greenOneNumber = greenOneNumber - cardIndex.green;
+        greenOneNumber = greenOneSubPoint;
         greenSetterNumber = greenSetterNumber + cardIndex.green;
         greenSetter.textContent = greenSetterNumber;
         greenOneSubPoint = greenOneSubPoint + cardIndex.subpoints.green;
@@ -262,7 +262,7 @@ function purchaseCard(cardIndex, arrayIndex) {
       }
       //silver
       if (!silverOneSubPoint >= cardIndex.silver) {
-        silverOneNumber = silverOneNumber - cardIndex.silver;
+        silverOneNumber = silverOneSubPoint;
         silverSetterNumber = silverSetterNumber + cardIndex.silver;
         silverSetter.textContent = silverSetterNumber;
         silverOneSubPoint = silverOneSubPoint + cardIndex.subpoints.silver;
@@ -274,6 +274,7 @@ function purchaseCard(cardIndex, arrayIndex) {
         greenOne.textContent = greenOneNumber;
       }
       if (!blueOneSubPoint >= cardIndex.blue) {
+        blueOneNumber = blueOneSubPoint;
       }
     }
   }
