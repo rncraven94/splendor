@@ -23,6 +23,10 @@ let silverOneSubPoint = 0;
 let blueOneSubPoint = 0;
 let redOneSubPoint = 0;
 let brownTwoSubPoint = 0;
+let greenTwoSubPoint = 0;
+let silverTwoSubPoint = 0;
+let blueTwoSubPoint = 0;
+let redTwoSubPoint = 0;
 
 playerOne = currentPlayer;
 const purchaseBtn = document.getElementById("purchase-btn");
