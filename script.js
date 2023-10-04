@@ -289,6 +289,12 @@ function purchaseCard(cardIndex, arrayIndex) {
     redTwoNumber >= cardIndex.red
   ) {
     //brown
+    brownTwoNumber = brownTwoSubPoint;
+    brownSetterNumber = brownSetterNumber + cardIndex.brown;
+    brownSetter.textContent = brownSetterNumber;
+    brownTwoSubPoint = brownTwoSubPoint + cardIndex.subpoints.brown;
+    brownTwoNumber = brownTwoNumber + cardIndex.subpoints.brown;
+    brownTwo.textContent = brownTwoNumber;
   }
 }
 
