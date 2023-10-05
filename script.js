@@ -27,7 +27,10 @@ let greenTwoSubPoint = 0;
 let silverTwoSubPoint = 0;
 let blueTwoSubPoint = 0;
 let redTwoSubPoint = 0;
-const playerOneScore = document.getElementById("");
+const playerOneScoreText = document.getElementById("player-one-score");
+let playerOneScore = 0;
+const playerTwoScoreText = document.getElementById("player-two-score");
+let playerTwoScore = 0;
 
 playerOne = currentPlayer;
 const purchaseBtn = document.getElementById("purchase-btn");
@@ -283,6 +286,8 @@ function purchaseCard(cardIndex, arrayIndex) {
       redOne.textContent = redOneNumber;
 
       // points
+      playerOneScore = playerOneScore + cardIndex.pointValue;
+      playerOneScoreText.textContent = playerOneScore;
     }
   } else if (
     brownTwoNumber >= cardIndex.brown &&
