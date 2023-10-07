@@ -317,6 +317,13 @@ function purchaseCard(cardIndex, arrayIndex) {
     silverTwoSubPoint = silverTwoSubPoint + cardIndex.subpoints.silver;
     silverTwoNumber = silverTwoNumber + cardIndex.subpoints.silver;
     silverTwo.textContent = silverTwoNumber;
+    //blue
+    blueTwoNumber = blueTwoSubPoint;
+    blueSetterNumber = blueSetterNumber + cardIndex.blue;
+    blueSetter.textContent = blueSetterNumber;
+    blueTwoSubPoint = blueTwoSubPoint + cardIndex.subpoints.blue;
+    blueTwoNumber = blueTwoNumber + cardIndex.subpoints.blue;
+    blueTwo.textContent = blueTwoNumber;
   }
 }
 
