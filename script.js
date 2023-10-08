@@ -324,6 +324,13 @@ function purchaseCard(cardIndex, arrayIndex) {
     blueTwoSubPoint = blueTwoSubPoint + cardIndex.subpoints.blue;
     blueTwoNumber = blueTwoNumber + cardIndex.subpoints.blue;
     blueTwo.textContent = blueTwoNumber;
+    //red
+    redTwoNumber = redTwoSubPoint;
+    redSetterNumber = redSetterNumber + cardIndex.red;
+    redSetter.textContent = redSetterNumber;
+    redTwoSubPoint = redTwoSubPoint + cardIndex.subpoints.red;
+    redTwoNumber = redTwoNumber + cardIndex.subpoints.red;
+    redTwo.textContent = redTwoNumber;
   }
 }
 
