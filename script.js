@@ -331,6 +331,10 @@ function purchaseCard(cardIndex, arrayIndex) {
     redTwoSubPoint = redTwoSubPoint + cardIndex.subpoints.red;
     redTwoNumber = redTwoNumber + cardIndex.subpoints.red;
     redTwo.textContent = redTwoNumber;
+
+    //score
+    playerTwoScore = playerTwoScore + cardIndex.pointValue;
+    playerTwoScoreText.textContent = playerTwoScore;
   }
 }
 
