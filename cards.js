@@ -1555,3 +1555,66 @@ let noble2 = {
   silver: 3,
 };
 nobles.push(noble2);
+let noble3 = {
+  pointValue: 5,
+  brown: 4,
+  blue: 0,
+  green: 0,
+  red: 0,
+  silver: 4,
+};
+nobles.push(noble3);
+let noble4 = {
+  pointValue: 5,
+  brown: 0,
+  blue: 4,
+  green: 4,
+  red: 0,
+  silver: 0,
+};
+nobles.push(noble4);
+let noble5 = {
+  pointValue: 5,
+  brown: 0,
+  blue: 3,
+  green: 3,
+  red: 3,
+  silver: 0,
+};
+nobles.push(noble5);
+let noble6 = {
+  pointValue: 5,
+  brown: 0,
+  blue: 3,
+  green: 3,
+  red: 0,
+  silver: 3,
+};
+nobles.push(noble6);
+let noble7 = {
+  pointValue: 5,
+  brown: 4,
+  blue: 0,
+  green: 0,
+  red: 4,
+  silver: 0,
+};
+nobles.push(noble7);
+let noble8 = {
+  pointValue: 5,
+  brown: 3,
+  blue: 3,
+  green: 0,
+  red: 0,
+  silver: 3,
+};
+nobles.push(noble8);
+let noble9 = {
+  pointValue: 5,
+  brown: 3,
+  blue: 0,
+  green: 3,
+  red: 3,
+  silver: 0,
+};
+nobles.push(noble9);
