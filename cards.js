@@ -3,6 +3,7 @@ use: "strict";
 export const cardsLevelOne = [];
 export const cardsLevelTwo = [];
 export const cardsLevelThree = [];
+export const nobles = [];
 
 let card1 = {
   mainColor: "brown",
@@ -1535,3 +1536,22 @@ let card90 = {
   },
 };
 cardsLevelThree.push(card90);
+//nobles
+let noble1 = {
+  pointValue: 5,
+  brown: 0,
+  blue: 0,
+  green: 4,
+  red: 4,
+  silver: 0,
+};
+nobles.push(noble1);
+let noble2 = {
+  pointValue: 5,
+  brown: 3,
+  blue: 0,
+  green: 0,
+  red: 3,
+  silver: 3,
+};
+nobles.push(noble2);
