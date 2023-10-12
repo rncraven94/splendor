@@ -1,5 +1,10 @@
 use: "strict";
-import { cardsLevelOne, cardsLevelThree, cardsLevelTwo } from "./cards.js";
+import {
+  cardsLevelOne,
+  cardsLevelThree,
+  cardsLevelTwo,
+  nobles,
+} from "./cards.js";
 
 // import cardsLevelThree from "./cards";
 
@@ -222,6 +227,7 @@ function shuffleArray(array) {
 shuffleArray(cardsLevelOne);
 shuffleArray(cardsLevelTwo);
 shuffleArray(cardsLevelThree);
+shuffleArray(nobles);
 console.log(cardsLevelOne);
 console.log(cardsLevelTwo);
 console.log(cardsLevelThree);
@@ -229,6 +235,7 @@ console.log(cardsLevelThree);
 let visibleRow1 = cardsLevelOne.slice(0, 4);
 let visibleRow2 = cardsLevelTwo.slice(0, 4);
 let visibleRow3 = cardsLevelThree.slice(0, 4);
+let visibleRow4 = nobles.slice(0, 3);
 
 // Define the purchaseCard function first
 function purchaseCard(cardIndex, arrayIndex) {
@@ -382,8 +389,8 @@ function displayAndPurchaseCards(
 
 // Usage:
 displayAndPurchaseCards(
-  [cardsLevelOne, cardsLevelTwo, cardsLevelThree],
-  [visibleRow1, visibleRow2, visibleRow3],
+  [cardsLevelOne, cardsLevelTwo, cardsLevelThree, nobles],
+  [visibleRow1, visibleRow2, visibleRow3, visibleRow4],
   purchaseCard
 );
 
