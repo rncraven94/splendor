@@ -295,6 +295,10 @@ function purchaseCard(cardIndex, arrayIndex) {
       // points
       playerOneScore = playerOneScore + cardIndex.pointValue;
       playerOneScoreText.textContent = playerOneScore;
+
+      // new cards
+      console.log(`${cardIndex}`);
+      console.log(cardsLevelOne);
     }
   } else if (
     brownTwoNumber >= cardIndex.brown &&
@@ -380,19 +384,25 @@ function displayAndPurchaseCards(
     purchaseBtn.addEventListener("click", function () {
       const cardIndex = cardName;
       const arrayIndex = this.getAttribute("data-array-index");
-      purchaseCardFunction(cardIndex, arrayIndex); // Pass the current array index
+      purchaseCardFunction(cardIndex, arrayIndex, cardName); // Pass the current array index
+
+      console.log(cardElement);
+      console.log(card);
+      console.log(cardIndex);
+      console.log(arrayIndex);
+      //code for adding new card to take its place
     });
 
     return cardElement;
   }
 }
-
-// Usage:
 displayAndPurchaseCards(
   [cardsLevelOne, cardsLevelTwo, cardsLevelThree, nobles],
   [visibleRow1, visibleRow2, visibleRow3, visibleRow4],
   purchaseCard
 );
+
+// Usage:
 
 brownSetter.addEventListener("click", function () {
   if (currentCounter < 3 && brownCounter < 2 && brown >= 1) {
