@@ -390,6 +390,7 @@ function displayAndPurchaseCards(
       console.log(card);
       console.log(cardIndex);
       console.log(arrayIndex);
+      console.log(visibleRow);
       //code for adding new card to take its place
     });
 
