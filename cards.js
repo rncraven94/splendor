@@ -6,6 +6,7 @@ export const cardsLevelThree = [];
 export const nobles = [];
 
 let card1 = {
+  arrayType: 1,
   mainColor: "brown",
   pointValue: 0,
   brown: 0,
@@ -23,6 +24,7 @@ let card1 = {
 };
 cardsLevelOne.push(card1);
 let card2 = {
+  arrayType: 1,
   mainColor: "brown",
   pointValue: 0,
   brown: 0,
@@ -40,6 +42,7 @@ let card2 = {
 };
 cardsLevelOne.push(card2);
 let card3 = {
+  arrayType: 1,
   mainColor: "brown",
   pointValue: 0,
   brown: 0,
@@ -57,6 +60,7 @@ let card3 = {
 };
 cardsLevelOne.push(card3);
 let card4 = {
+  arrayType: 1,
   mainColor: "brown",
   pointValue: 0,
   brown: 1,
@@ -74,6 +78,7 @@ let card4 = {
 };
 cardsLevelOne.push(card4);
 let card5 = {
+  arrayType: 1,
   mainColor: "brown",
   pointValue: 0,
   brown: 0,
@@ -91,6 +96,7 @@ let card5 = {
 };
 cardsLevelOne.push(card5);
 let card6 = {
+  arrayType: 1,
   mainColor: "brown",
   pointValue: 0,
   brown: 0,
@@ -108,6 +114,7 @@ let card6 = {
 };
 cardsLevelOne.push(card6);
 let card7 = {
+  arrayType: 1,
   mainColor: "brown",
   pointValue: 0,
   brown: 0,
@@ -125,6 +132,7 @@ let card7 = {
 };
 cardsLevelOne.push(card7);
 let card8 = {
+  arrayType: 1,
   mainColor: "brown",
   pointValue: 1,
   brown: 0,
@@ -142,6 +150,7 @@ let card8 = {
 };
 cardsLevelOne.push(card8);
 let card9 = {
+  arrayType: 1,
   mainColor: "blue",
   pointValue: 0,
   brown: 1,
@@ -159,6 +168,7 @@ let card9 = {
 };
 cardsLevelOne.push(card9);
 let card10 = {
+  arrayType: 1,
   mainColor: "blue",
   pointValue: 0,
   brown: 1,
@@ -176,6 +186,7 @@ let card10 = {
 };
 cardsLevelOne.push(card10);
 let card11 = {
+  arrayType: 1,
   mainColor: "blue",
   pointValue: 0,
   brown: 0,
@@ -193,6 +204,7 @@ let card11 = {
 };
 cardsLevelOne.push(card11);
 let card12 = {
+  arrayType: 1,
   mainColor: "blue",
   pointValue: 0,
   brown: 0,
@@ -210,6 +222,7 @@ let card12 = {
 };
 cardsLevelOne.push(card12);
 let card13 = {
+  arrayType: 1,
   mainColor: "blue",
   pointValue: 0,
   brown: 2,
@@ -227,6 +240,7 @@ let card13 = {
 };
 cardsLevelOne.push(card13);
 let card14 = {
+  arrayType: 1,
   mainColor: "blue",
   pointValue: 0,
   brown: 2,
@@ -244,6 +258,7 @@ let card14 = {
 };
 cardsLevelOne.push(card14);
 let card15 = {
+  arrayType: 1,
   mainColor: "blue",
   pointValue: 0,
   brown: 3,
@@ -261,6 +276,7 @@ let card15 = {
 };
 cardsLevelOne.push(card15);
 let card16 = {
+  arrayType: 1,
   mainColor: "blue",
   pointValue: 1,
   brown: 0,
@@ -278,6 +294,7 @@ let card16 = {
 };
 cardsLevelOne.push(card16);
 let card17 = {
+  arrayType: 1,
   mainColor: "silver",
   pointValue: 0,
   brown: 1,
@@ -295,6 +312,7 @@ let card17 = {
 };
 cardsLevelOne.push(card17);
 let card18 = {
+  arrayType: 1,
   mainColor: "silver",
   pointValue: 0,
   brown: 1,
@@ -312,6 +330,7 @@ let card18 = {
 };
 cardsLevelOne.push(card18);
 let card19 = {
+  arrayType: 1,
   mainColor: "silver",
   pointValue: 0,
   brown: 1,
@@ -329,6 +348,7 @@ let card19 = {
 };
 cardsLevelOne.push(card19);
 let card20 = {
+  arrayType: 1,
   mainColor: "silver",
   pointValue: 0,
   brown: 1,
@@ -346,6 +366,7 @@ let card20 = {
 };
 cardsLevelOne.push(card20);
 let card21 = {
+  arrayType: 1,
   mainColor: "silver",
   pointValue: 0,
   brown: 1,
@@ -363,6 +384,7 @@ let card21 = {
 };
 cardsLevelOne.push(card21);
 let card22 = {
+  arrayType: 1,
   mainColor: "silver",
   pointValue: 0,
   brown: 0,
@@ -380,6 +402,7 @@ let card22 = {
 };
 cardsLevelOne.push(card22);
 let card23 = {
+  arrayType: 1,
   mainColor: "silver",
   pointValue: 0,
   brown: 0,
@@ -397,6 +420,7 @@ let card23 = {
 };
 cardsLevelOne.push(card23);
 let card24 = {
+  arrayType: 1,
   mainColor: "silver",
   pointValue: 1,
   brown: 0,
@@ -414,6 +438,7 @@ let card24 = {
 };
 cardsLevelOne.push(card24);
 let card25 = {
+  arrayType: 1,
   mainColor: "green",
   pointValue: 0,
   brown: 1,
@@ -431,6 +456,7 @@ let card25 = {
 };
 cardsLevelOne.push(card25);
 let card26 = {
+  arrayType: 1,
   mainColor: "green",
   pointValue: 0,
   brown: 2,
@@ -448,6 +474,7 @@ let card26 = {
 };
 cardsLevelOne.push(card26);
 let card27 = {
+  arrayType: 1,
   mainColor: "green",
   pointValue: 0,
   brown: 2,
@@ -465,6 +492,7 @@ let card27 = {
 };
 cardsLevelOne.push(card27);
 let card28 = {
+  arrayType: 1,
   mainColor: "green",
   pointValue: 0,
   brown: 0,
@@ -482,6 +510,7 @@ let card28 = {
 };
 cardsLevelOne.push(card28);
 let card29 = {
+  arrayType: 1,
   mainColor: "green",
   pointValue: 0,
   brown: 0,
@@ -499,6 +528,7 @@ let card29 = {
 };
 cardsLevelOne.push(card29);
 let card30 = {
+  arrayType: 1,
   mainColor: "green",
   pointValue: 0,
   brown: 0,
@@ -516,6 +546,7 @@ let card30 = {
 };
 cardsLevelOne.push(card30);
 let card31 = {
+  arrayType: 1,
   mainColor: "green",
   pointValue: 0,
   brown: 0,
@@ -533,6 +564,7 @@ let card31 = {
 };
 cardsLevelOne.push(card31);
 let card32 = {
+  arrayType: 1,
   mainColor: "green",
   pointValue: 1,
   brown: 4,
@@ -550,6 +582,7 @@ let card32 = {
 };
 cardsLevelOne.push(card32);
 let card33 = {
+  arrayType: 1,
   mainColor: "red",
   pointValue: 0,
   brown: 1,
@@ -567,6 +600,7 @@ let card33 = {
 };
 cardsLevelOne.push(card33);
 let card34 = {
+  arrayType: 1,
   mainColor: "red",
   pointValue: 0,
   brown: 1,
@@ -584,6 +618,7 @@ let card34 = {
 };
 cardsLevelOne.push(card34);
 let card35 = {
+  arrayType: 1,
   mainColor: "red",
   pointValue: 0,
   brown: 2,
@@ -601,6 +636,7 @@ let card35 = {
 };
 cardsLevelOne.push(card35);
 let card36 = {
+  arrayType: 1,
   mainColor: "red",
   pointValue: 0,
   brown: 3,
@@ -618,6 +654,7 @@ let card36 = {
 };
 cardsLevelOne.push(card36);
 let card37 = {
+  arrayType: 1,
   mainColor: "red",
   pointValue: 0,
   brown: 0,
@@ -635,6 +672,7 @@ let card37 = {
 };
 cardsLevelOne.push(card37);
 let card38 = {
+  arrayType: 1,
   mainColor: "red",
   pointValue: 0,
   brown: 0,
@@ -652,6 +690,7 @@ let card38 = {
 };
 cardsLevelOne.push(card38);
 let card39 = {
+  arrayType: 1,
   mainColor: "red",
   pointValue: 0,
   brown: 0,
@@ -669,6 +708,7 @@ let card39 = {
 };
 cardsLevelOne.push(card39);
 let card40 = {
+  arrayType: 1,
   mainColor: "red",
   pointValue: 0,
   brown: 1,
@@ -686,6 +726,7 @@ let card40 = {
 };
 cardsLevelOne.push(card40);
 let card41 = {
+  arrayType: 1,
   mainColor: "brown",
   pointValue: 1,
   brown: 0,
