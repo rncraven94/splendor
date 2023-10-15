@@ -391,6 +391,13 @@ function displayAndPurchaseCards(
       console.log(cardIndex);
       console.log(arrayIndex);
       console.log(visibleRow);
+      if ((card.arrayType = 1)) {
+        console.log(cardsLevelOne[4]);
+        card = cardsLevelOne[4];
+        cardsLevelOne;
+        cardElement.innerHTML = `<div class="card-box ${card.mainColor}-box-color">  <p>${card.mainColor}</p>
+        <p>${card.pointValue}</p> <p>Brown: ${card.brown}</p> <p>Green: ${card.green}</p><p>Silver: ${card.silver}</p> <p>Blue: ${card.blue}</p> <p>Red: ${card.red}</p> <button class="purchase-btn" data-card-index="${index}"">Purchase</button> </div>`;
+      }
       //code for adding new card to take its place
     });
 
