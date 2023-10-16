@@ -238,6 +238,66 @@ let visibleRow3 = cardsLevelThree.slice(0, 4);
 let visibleRow4 = nobles.slice(0, 3);
 
 // Define the purchaseCard function first
+function displayAndPurchaseCards(
+  cards,
+  visibleRow,
+  purchaseCardFunction,
+  maxCards = 4
+) {
+  const cardContainer = document.getElementById("card-container");
+  cardContainer.innerHTML = ""; // Clear existing cards
+
+  for (let i = 0; i < cards.length; i++) {
+    const cardRow = document.createElement("div");
+    cardRow.classList.add("card-row");
+
+    cards[i].slice(0, maxCards).forEach((card, index) => {
+      const cardElement = createCardElement(card, index, purchaseCardFunction);
+      cardRow.appendChild(cardElement);
+    });
+
+    cardContainer.appendChild(cardRow);
+  }
+
+  function createCardElement(card, index, purchaseCardFunction) {
+    const cardElement = document.createElement("div");
+    const cardName = card;
+    cardElement.classList.add("card");
+
+    cardElement.innerHTML = ` <div class="card-box ${card.mainColor}-box-color">  <p>${card.mainColor}</p>
+      <p>${card.pointValue}</p> <p>Brown: ${card.brown}</p> <p>Green: ${card.green}</p><p>Silver: ${card.silver}</p> <p>Blue: ${card.blue}</p> <p>Red: ${card.red}</p> <button class="purchase-btn" data-card-index="${index}"">Purchase</button> </div>`;
+
+    const purchaseBtn = cardElement.querySelector(".purchase-btn");
+
+    purchaseBtn.addEventListener("click", function () {
+      const cardIndex = cardName;
+      const arrayIndex = this.getAttribute("data-array-index");
+      purchaseCardFunction(cardIndex, arrayIndex, cardName); // Pass the current array index
+
+      if (card.arrayType === 1) {
+        const parent = cardElement.parentElement;
+        cardsLevelOne.shift();
+        if (cardsLevelOne.length > 0) {
+          const newCard = cardsLevelOne[0]; // Get the new card
+          const newCardElement = createCardElement(
+            newCard,
+            index,
+            purchaseCardFunction
+          );
+          parent.replaceChild(newCardElement, cardElement);
+        }
+      }
+      //code for adding new card to take its place
+    });
+
+    return cardElement;
+  }
+}
+displayAndPurchaseCards(
+  [cardsLevelOne, cardsLevelTwo, cardsLevelThree, nobles],
+  [visibleRow1, visibleRow2, visibleRow3, visibleRow4],
+  purchaseCard
+);
 function purchaseCard(cardIndex, arrayIndex) {
   if ((currentPlayer = true)) {
     console.log(cardIndex);
@@ -350,65 +410,6 @@ function purchaseCard(cardIndex, arrayIndex) {
 }
 
 //display row one
-function displayAndPurchaseCards(
-  cards,
-  visibleRow,
-  purchaseCardFunction,
-  maxCards = 4
-) {
-  const cardContainer = document.getElementById("card-container");
-  cardContainer.innerHTML = ""; // Clear existing cards
-
-  for (let i = 0; i < cards.length; i++) {
-    const cardRow = document.createElement("div");
-    cardRow.classList.add("card-row");
-
-    cards[i].slice(0, maxCards).forEach((card, index) => {
-      const cardElement = createCardElement(card, index, purchaseCardFunction);
-      cardRow.appendChild(cardElement);
-    });
-
-    cardContainer.appendChild(cardRow);
-  }
-
-  function createCardElement(card, index, purchaseCardFunction) {
-    const cardElement = document.createElement("div");
-    const cardName = card;
-    cardElement.classList.add("card");
-
-    cardElement.innerHTML = ` <div class="card-box ${card.mainColor}-box-color">  <p>${card.mainColor}</p>
-      <p>${card.pointValue}</p> <p>Brown: ${card.brown}</p> <p>Green: ${card.green}</p><p>Silver: ${card.silver}</p> <p>Blue: ${card.blue}</p> <p>Red: ${card.red}</p> <button class="purchase-btn" data-card-index="${index}"">Purchase</button> </div>`;
-
-    const purchaseBtn = cardElement.querySelector(".purchase-btn");
-
-    purchaseBtn.addEventListener("click", function () {
-      const cardIndex = cardName;
-      const arrayIndex = this.getAttribute("data-array-index");
-      purchaseCardFunction(cardIndex, arrayIndex, cardName); // Pass the current array index
-
-      console.log(cardElement);
-      console.log(card);
-      console.log(cardIndex);
-      console.log(arrayIndex);
-      console.log(visibleRow);
-      if ((card.arrayType = 1)) {
-        console.log(cardsLevelOne[4]);
-        card = cardsLevelOne[4];
-        cardsLevelOne;
-        cardElement.innerHTML = `<div class="card-box ${card.mainColor}-box-color">  <p>${card.mainColor}</p>
-        <p>${card.pointValue}</p> <p>Brown: ${card.brown}</p> <p>Green: ${card.green}</p><p>Silver: ${card.silver}</p> <p>Blue: ${card.blue}</p> <p>Red: ${card.red}</p> <button class="purchase-btn" data-card-index="${index}"">Purchase</button> </div>`;
-      }
-      //code for adding new card to take its place
-    });
-
-    return cardElement;
-  }
-}
-displayAndPurchaseCards(
-  [cardsLevelOne, cardsLevelTwo, cardsLevelThree, nobles],
-  [visibleRow1, visibleRow2, visibleRow3, visibleRow4],
-  purchaseCard
-);
 
 // Usage:
 
