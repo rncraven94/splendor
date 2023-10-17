@@ -270,23 +270,10 @@ function displayAndPurchaseCards(
     const purchaseBtn = cardElement.querySelector(".purchase-btn");
 
     purchaseBtn.addEventListener("click", function () {
-      const cardIndex = cardName;
+      const cardIndex = card;
       const arrayIndex = this.getAttribute("data-array-index");
       purchaseCardFunction(cardIndex, arrayIndex, cardName); // Pass the current array index
 
-      if (card.arrayType === 1) {
-        const parent = cardElement.parentElement;
-        cardsLevelOne.shift();
-        if (cardsLevelOne.length > 0) {
-          const newCard = cardsLevelOne[0]; // Get the new card
-          const newCardElement = createCardElement(
-            newCard,
-            index,
-            purchaseCardFunction
-          );
-          parent.replaceChild(newCardElement, cardElement);
-        }
-      }
       //code for adding new card to take its place
     });
 
@@ -357,8 +344,28 @@ function purchaseCard(cardIndex, arrayIndex) {
       playerOneScoreText.textContent = playerOneScore;
 
       // new cards
-      console.log(`${cardIndex}`);
-      console.log(cardsLevelOne);
+
+      // if (cardIndex.arrayType === 1) {
+      //   if (card.arrayType === 1) {
+      //     const parent = cardElement.parentElement;
+      //     cardsLevelOne.shift();
+      //     if (cardsLevelOne.length > 0) {
+      //       const newCard = cardsLevelOne[0]; // Get the new card
+      //       const newCardElement = createCardElement(
+      //         newCard,
+      //         index,
+      //         purchaseCardFunction
+      //       );
+      //       parent.replaceChild(newCardElement, cardElement);
+      //     }
+      //   }
+      // }
+      if (cardIndex.arrayType === 1) {
+        cardsLevelOne.shift();
+        console.log(cardsLevelOne[3]);
+        const newCard = cardsLevelOne[3];
+        cardIndex = newCard;
+      }
     }
   } else if (
     brownTwoNumber >= cardIndex.brown &&
