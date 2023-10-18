@@ -75,7 +75,7 @@ let redOneNumber = 0;
 const redTwo = document.getElementById("player-two-red");
 let redTwoNumber = 0;
 
-confirmButton.addEventListener("click", function () {
+function switchPlayers() {
   currentPlayer = !currentPlayer;
   currentCounter = 0;
   brownCounter = 0;
@@ -90,7 +90,8 @@ confirmButton.addEventListener("click", function () {
     playerOneSection.classList.add("active-player");
     playerTwoSection.classList.remove("active-player");
   }
-});
+}
+confirmButton.addEventListener("click", switchPlayers);
 
 undoButton.addEventListener("click", function () {
   currentCounter = 0;
@@ -275,6 +276,25 @@ function displayAndPurchaseCards(
       purchaseCardFunction(cardIndex, arrayIndex, cardName); // Pass the current array index
 
       //code for adding new card to take its place
+      console.log(brownCounter);
+      console.log(brownOneNumber);
+      console.log(card.brown);
+      console.log(brownOneNumber >= card.brown);
+
+      if (card.arrayType === 1) {
+        const parent = cardElement.parentElement;
+        cardsLevelOne.shift();
+
+        if (cardsLevelOne.length > 0) {
+          const newCard = cardsLevelOne[0]; // Get the new card
+          const newCardElement = createCardElement(
+            newCard,
+            index,
+            purchaseCardFunction
+          );
+          parent.replaceChild(newCardElement, cardElement);
+        }
+      }
     });
 
     return cardElement;
@@ -366,6 +386,8 @@ function purchaseCard(cardIndex, arrayIndex) {
         const newCard = cardsLevelOne[3];
         cardIndex = newCard;
       }
+      //switching to the next player
+      switchPlayers();
     }
   } else if (
     brownTwoNumber >= cardIndex.brown &&
