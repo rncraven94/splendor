@@ -302,7 +302,7 @@ function displayAndPurchaseCards(
             cardsLevelOne.shift();
 
             if (cardsLevelOne.length > 0) {
-              const newCard = cardsLevelOne[0]; // Get the new card
+              const newCard = cardsLevelOne[3]; // Get the new card
               const newCardElement = createCardElement(
                 newCard,
                 index,
@@ -317,7 +317,7 @@ function displayAndPurchaseCards(
             cardsLevelTwo.shift();
 
             if (cardsLevelTwo.length > 0) {
-              const newCard = cardsLevelTwo[0];
+              const newCard = cardsLevelTwo[3];
               const newCardElement = createCardElement(
                 newCard,
                 index,
@@ -328,7 +328,20 @@ function displayAndPurchaseCards(
               cardElement.innerHTML = "";
             }
           } else if (card.arrayType === 3) {
-            //
+            const parent = cardElement.parentElement;
+            cardsLevelThree.shift();
+
+            if (cardsLevelThree.length > 0) {
+              const newCard = cardsLevelThree[3];
+              const newCardElement = createCardElement(
+                newCard,
+                index,
+                purchaseCardFunction
+              );
+              parent.replaceChild(newCardElement, cardElement);
+            } else {
+              cardElement.innerHTML = "";
+            }
           } else if (card.arrayType === 4) {
             cardElement.innerHTML = "";
           }
@@ -398,6 +411,10 @@ function purchaseCard(cardIndex, arrayIndex) {
         redOneSubPoint = redOneSubPoint + cardIndex.subpoints.red;
         redOneNumber = redOneNumber + cardIndex.subpoints.red;
         redOne.textContent = redOneNumber;
+        console.log(redOneNumber);
+        console.log(redSetterNumber);
+        console.log(red);
+        console.log(redCounter);
 
         // points
         playerOneScore = playerOneScore + cardIndex.pointValue;
