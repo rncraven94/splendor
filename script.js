@@ -9,8 +9,6 @@ import {
 // import cardsLevelThree from "./cards";
 
 let currentPlayer = true;
-let playerOne;
-let playerTwo;
 let currentCounter = 0;
 let brownCounter = 0;
 let brown = 7;
@@ -36,9 +34,7 @@ const playerOneScoreText = document.getElementById("player-one-score");
 let playerOneScore = 0;
 const playerTwoScoreText = document.getElementById("player-two-score");
 let playerTwoScore = 0;
-let winner = 0;
 
-playerOne = currentPlayer;
 const purchaseBtn = document.getElementById("purchase-btn");
 const newGameButton = document.getElementById("new-game");
 const undoButton = document.getElementById("undo-button");
@@ -85,18 +81,10 @@ let greenTwoPurchase;
 let silverTwoPurchase;
 let blueTwoPurchase;
 let redTwoPurchase;
+
 const helper = document.getElementById("help");
 function help() {
-  console.log(brownTwoPurchase);
-  console.log(greenTwoPurchase);
-  console.log(silverTwoPurchase);
-  console.log(blueTwoPurchase);
-  console.log(redTwoPurchase);
-  console.log(brownOnePurchase);
-  console.log(greenOnePurchase);
-  console.log(silverOnePurchase);
-  console.log(blueOnePurchase);
-  console.log(redOnePurchase);
+  //help section for rules
 }
 helper.addEventListener("click", help);
 
@@ -193,59 +181,7 @@ undoButton.addEventListener("click", function () {
 });
 
 newGameButton.addEventListener("click", function () {
-  currentPlayer = playerOne;
-  playerOneSection.classList.add("active-player");
-  playerTwoSection.classList.remove("active-player");
-  currentCounter = 0;
-  //brown section
-  brownCounter = 0;
-  brownSetterNumber = 7;
-  brownSetter.textContent = brownSetterNumber;
-  brown = 7;
-  brownOneNumber = 0;
-  brownTwoNumber = 0;
-  brownOne.textContent = brownOneNumber;
-  brownTwo.textContent = brownTwoNumber;
-
-  //green section
-  greenCounter = 0;
-  greenSetterNumber = 7;
-  greenSetter.textContent = greenSetterNumber;
-  green = 7;
-  greenOneNumber = 0;
-  greenTwoNumber = 0;
-  greenOne.textContent = greenOneNumber;
-  greenTwo.textContent = greenTwoNumber;
-
-  //silver section
-  silverCounter = 0;
-  silverSetterNumber = 7;
-  silverSetter.textContent = silverSetterNumber;
-  silver = 7;
-  silverOneNumber = 0;
-  silverTwoNumber = 0;
-  silverOne.textContent = silverOneNumber;
-  silverTwo.textContent = silverTwoNumber;
-
-  //blue section
-  blueCounter = 0;
-  blueSetterNumber = 7;
-  blueSetter.textContent = blueSetterNumber;
-  blue = 7;
-  blueOneNumber = 0;
-  blueTwoNumber = 0;
-  blueOne.textContent = blueOneNumber;
-  blueTwo.textContent = blueTwoNumber;
-
-  //red section
-  redCounter = 0;
-  redSetterNumber = 7;
-  redSetter.textContent = redSetterNumber;
-  red = 7;
-  redOneNumber = 0;
-  redTwoNumber = 0;
-  redOne.textContent = redOneNumber;
-  redTwo.textContent = redTwoNumber;
+  location.reload();
 });
 
 //loading the dom with random cards of the three levels
