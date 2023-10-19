@@ -312,6 +312,8 @@ function displayAndPurchaseCards(
             } else {
               cardElement.innerHTML = "";
             }
+          } else if (card.arrayType === 2) {
+            console.log("success");
           }
         }
       }
