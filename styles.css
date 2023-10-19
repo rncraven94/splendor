@@ -12,7 +12,7 @@
 .setter-body,
 .player-one,
 .player-two {
-  font-size: 2.4rem;
+  font-size: 1.4rem;
   border: 1px solid black;
   max-width: 20rem;
   display: grid;
@@ -79,13 +79,17 @@
   max-width: 12rem;
   display: flex;
   flex-direction: column;
-  padding: 1.2rem;
+  padding: 0.6rem;
   border-radius: 25%;
+  justify-content: center;
+  text-align: center;
 }
 
 .card-container {
-  display: flex;
-  flex-direction: row;
+  /* display: flex;
+  flex-direction: row; */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
 }
 
@@ -111,4 +115,6 @@
 
 .purchase-btn {
   font-size: 0.8rem;
+  max-width: 4rem;
+  margin-left: 3rem;
 }
