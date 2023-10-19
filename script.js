@@ -313,7 +313,20 @@ function displayAndPurchaseCards(
               cardElement.innerHTML = "";
             }
           } else if (card.arrayType === 2) {
-            console.log("success");
+            const parent = cardElement.parentElement;
+            cardsLevelTwo.shift();
+
+            if (cardsLevelTwo.length > 0) {
+              const newCard = cardsLevelTwo[0];
+              const newCardElement = createCardElement(
+                newCard,
+                index,
+                purchaseCardFunction
+              );
+              parent.replaceChild(newCardElement, cardElement);
+            } else {
+              cardElement.innerHTML = "";
+            }
           }
         }
       }
