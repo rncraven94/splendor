@@ -372,7 +372,7 @@ function purchaseCard(cardIndex, arrayIndex) {
         brownOneNumber = brownOneSubPoint;
         brownSetterNumber = brownSetterNumber + cardIndex.brown;
         brownSetter.textContent = brownSetterNumber;
-
+        brown = brownSetterNumber;
         brownOneSubPoint = brownOneSubPoint + cardIndex.subpoints.brown;
         brownOneNumber = brownOneNumber + cardIndex.subpoints.brown;
         brownOne.textContent = brownOneNumber;
@@ -382,6 +382,7 @@ function purchaseCard(cardIndex, arrayIndex) {
         greenOneNumber = greenOneSubPoint;
         greenSetterNumber = greenSetterNumber + cardIndex.green;
         greenSetter.textContent = greenSetterNumber;
+        green = greenSetterNumber;
         greenOneSubPoint = greenOneSubPoint + cardIndex.subpoints.green;
         greenOneNumber = greenOneNumber + cardIndex.subpoints.green;
         greenOne.textContent = greenOneNumber;
@@ -391,6 +392,7 @@ function purchaseCard(cardIndex, arrayIndex) {
         silverOneNumber = silverOneSubPoint;
         silverSetterNumber = silverSetterNumber + cardIndex.silver;
         silverSetter.textContent = silverSetterNumber;
+        silver = silverSetterNumber;
         silverOneSubPoint = silverOneSubPoint + cardIndex.subpoints.silver;
         silverOneNumber = silverOneNumber + cardIndex.subpoints.silver;
         silverOne.textContent = silverOneNumber;
@@ -400,6 +402,7 @@ function purchaseCard(cardIndex, arrayIndex) {
         blueOneNumber = blueOneSubPoint;
         blueSetterNumber = blueSetterNumber + cardIndex.blue;
         blueSetter.textContent = blueSetterNumber;
+        blue = blueSetterNumber;
         blueOneSubPoint = blueOneSubPoint + cardIndex.subpoints.blue;
         blueOneNumber = blueOneNumber + cardIndex.subpoints.blue;
         blueOne.textContent = blueOneNumber;
@@ -408,13 +411,10 @@ function purchaseCard(cardIndex, arrayIndex) {
         redOneNumber = redOneSubPoint;
         redSetterNumber = redSetterNumber + cardIndex.red;
         redSetter.textContent = redSetterNumber;
+        red = redSetterNumber;
         redOneSubPoint = redOneSubPoint + cardIndex.subpoints.red;
         redOneNumber = redOneNumber + cardIndex.subpoints.red;
         redOne.textContent = redOneNumber;
-        console.log(redOneNumber);
-        console.log(redSetterNumber);
-        console.log(red);
-        console.log(redCounter);
 
         // points
         playerOneScore = playerOneScore + cardIndex.pointValue;
