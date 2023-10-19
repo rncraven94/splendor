@@ -74,6 +74,7 @@ const redOne = document.getElementById("player-one-red");
 let redOneNumber = 0;
 const redTwo = document.getElementById("player-two-red");
 let redTwoNumber = 0;
+let brownOnePurchase;
 
 function switchPlayers() {
   currentPlayer = !currentPlayer;
@@ -279,7 +280,8 @@ function displayAndPurchaseCards(
       console.log(brownCounter);
       console.log(brownOneNumber);
       console.log(card.brown);
-      console.log(brownOneNumber >= card.brown);
+      console.log(brownOnePurchase >= card.brown);
+      console.log(brownOnePurchase);
       if (currentCounter < 1) {
         if (card.arrayType === 1) {
           const parent = cardElement.parentElement;
@@ -293,6 +295,7 @@ function displayAndPurchaseCards(
               purchaseCardFunction
             );
             parent.replaceChild(newCardElement, cardElement);
+            switchPlayers();
           }
         }
       }
@@ -319,7 +322,7 @@ function purchaseCard(cardIndex, arrayIndex) {
         redOneNumber >= cardIndex.red
       ) {
         //brown
-
+        brownOnePurchase = brownOneNumber;
         brownOneNumber = brownOneSubPoint;
         brownSetterNumber = brownSetterNumber + cardIndex.brown;
         brownSetter.textContent = brownSetterNumber;
