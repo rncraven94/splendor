@@ -2,6 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Roboto;
+  font-weight: bold;
 }
 .container {
   display: flex;
@@ -17,6 +19,8 @@
   max-width: 20rem;
   display: grid;
   flex-direction: column;
+  border-radius: 5%;
+  margin-bottom: 0.2rem;
 }
 .menu {
   display: flex;
@@ -79,7 +83,7 @@
   max-width: 12rem;
   display: flex;
   flex-direction: column;
-  padding: 0.6rem;
+  padding: 0.2rem;
   border-radius: 25%;
   justify-content: center;
   text-align: center;
@@ -116,5 +120,5 @@
 .purchase-btn {
   font-size: 0.8rem;
   max-width: 4rem;
-  margin-left: 3rem;
+  margin-left: 3.6rem;
 }
