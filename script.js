@@ -75,6 +75,10 @@ let redOneNumber = 0;
 const redTwo = document.getElementById("player-two-red");
 let redTwoNumber = 0;
 let brownOnePurchase;
+let greenOnePurchase;
+let silverOnePurchase;
+let blueOnePurchase;
+let redOnePurchase;
 
 function switchPlayers() {
   currentPlayer = !currentPlayer;
@@ -277,30 +281,39 @@ function displayAndPurchaseCards(
       purchaseCardFunction(cardIndex, arrayIndex, cardName); // Pass the current array index
 
       //code for adding new card to take its place
-      console.log(brownCounter);
-      console.log(brownOneNumber);
-      console.log(card.brown);
-      console.log(brownOnePurchase >= card.brown);
-      console.log(brownOnePurchase);
-      if (currentCounter < 1) {
-        if (card.arrayType === 1) {
-          const parent = cardElement.parentElement;
-          cardsLevelOne.shift();
 
-          if (cardsLevelOne.length > 0) {
-            const newCard = cardsLevelOne[0]; // Get the new card
-            const newCardElement = createCardElement(
-              newCard,
-              index,
-              purchaseCardFunction
-            );
-            parent.replaceChild(newCardElement, cardElement);
-            switchPlayers();
+      console.log(brownOnePurchase);
+      console.log(greenOnePurchase);
+      console.log(silverOnePurchase);
+      console.log(blueOnePurchase);
+      console.log(redOnePurchase);
+      if (currentCounter < 1) {
+        if (
+          brownOnePurchase >= card.brown &&
+          greenOnePurchase >= card.green &&
+          silverOnePurchase >= card.silver &&
+          blueOnePurchase >= card.blue &&
+          redOnePurchase >= card.red
+        ) {
+          if (card.arrayType === 1) {
+            const parent = cardElement.parentElement;
+            cardsLevelOne.shift();
+
+            if (cardsLevelOne.length > 0) {
+              const newCard = cardsLevelOne[0]; // Get the new card
+              const newCardElement = createCardElement(
+                newCard,
+                index,
+                purchaseCardFunction
+              );
+              parent.replaceChild(newCardElement, cardElement);
+            }
           }
         }
       }
     });
 
+    switchPlayers();
     return cardElement;
   }
 }
@@ -332,7 +345,7 @@ function purchaseCard(cardIndex, arrayIndex) {
         brownOne.textContent = brownOneNumber;
 
         //green
-
+        greenOnePurchase = greenOneNumber;
         greenOneNumber = greenOneSubPoint;
         greenSetterNumber = greenSetterNumber + cardIndex.green;
         greenSetter.textContent = greenSetterNumber;
@@ -341,6 +354,7 @@ function purchaseCard(cardIndex, arrayIndex) {
         greenOne.textContent = greenOneNumber;
 
         //silver
+        silverOnePurchase = silverOneNumber;
         silverOneNumber = silverOneSubPoint;
         silverSetterNumber = silverSetterNumber + cardIndex.silver;
         silverSetter.textContent = silverSetterNumber;
@@ -349,7 +363,7 @@ function purchaseCard(cardIndex, arrayIndex) {
         silverOne.textContent = silverOneNumber;
 
         //blue
-
+        blueOnePurchase = blueOneNumber;
         blueOneNumber = blueOneSubPoint;
         blueSetterNumber = blueSetterNumber + cardIndex.blue;
         blueSetter.textContent = blueSetterNumber;
@@ -357,6 +371,7 @@ function purchaseCard(cardIndex, arrayIndex) {
         blueOneNumber = blueOneNumber + cardIndex.subpoints.blue;
         blueOne.textContent = blueOneNumber;
         //red
+        redOnePurchase = redOneNumber;
         redOneNumber = redOneSubPoint;
         redSetterNumber = redSetterNumber + cardIndex.red;
         redSetter.textContent = redSetterNumber;
