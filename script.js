@@ -79,6 +79,11 @@ let greenOnePurchase;
 let silverOnePurchase;
 let blueOnePurchase;
 let redOnePurchase;
+let brownTwoPurchase;
+let greenTwoPurchase;
+let silverTwoPurchase;
+let blueTwoPurchase;
+let redTwoPurchase;
 
 function switchPlayers() {
   currentPlayer = !currentPlayer;
