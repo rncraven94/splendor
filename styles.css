@@ -91,3 +91,7 @@
 .red-box-color {
   background-color: red;
 }
+
+.hidden {
+  opacity: 100;
+}

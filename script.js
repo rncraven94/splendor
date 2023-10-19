@@ -234,9 +234,6 @@ shuffleArray(cardsLevelOne);
 shuffleArray(cardsLevelTwo);
 shuffleArray(cardsLevelThree);
 shuffleArray(nobles);
-console.log(cardsLevelOne);
-console.log(cardsLevelTwo);
-console.log(cardsLevelThree);
 
 let visibleRow1 = cardsLevelOne.slice(0, 4);
 let visibleRow2 = cardsLevelTwo.slice(0, 4);
@@ -307,13 +304,14 @@ function displayAndPurchaseCards(
                 purchaseCardFunction
               );
               parent.replaceChild(newCardElement, cardElement);
+            } else {
+              cardElement.innerHTML = "";
             }
           }
         }
       }
     });
 
-    switchPlayers();
     return cardElement;
   }
 }
@@ -325,8 +323,6 @@ displayAndPurchaseCards(
 function purchaseCard(cardIndex, arrayIndex) {
   if (currentCounter < 1) {
     if ((currentPlayer = true)) {
-      console.log(cardIndex);
-      console.log(cardIndex.brown);
       if (
         brownOneNumber >= cardIndex.brown &&
         greenOneNumber >= cardIndex.green &&
@@ -382,32 +378,18 @@ function purchaseCard(cardIndex, arrayIndex) {
         // points
         playerOneScore = playerOneScore + cardIndex.pointValue;
         playerOneScoreText.textContent = playerOneScore;
-
-        // new cards
-
-        // if (cardIndex.arrayType === 1) {
-        //   if (card.arrayType === 1) {
-        //     const parent = cardElement.parentElement;
-        //     cardsLevelOne.shift();
-        //     if (cardsLevelOne.length > 0) {
-        //       const newCard = cardsLevelOne[0]; // Get the new card
-        //       const newCardElement = createCardElement(
-        //         newCard,
-        //         index,
-        //         purchaseCardFunction
-        //       );
-        //       parent.replaceChild(newCardElement, cardElement);
-        //     }
-        //   }
-        // }
-        if (cardIndex.arrayType === 1) {
-          cardsLevelOne.shift();
-          console.log(cardsLevelOne[3]);
-          const newCard = cardsLevelOne[3];
-          cardIndex = newCard;
-        }
         //switching to the next player
         switchPlayers();
+        // corrections
+        if (brownSetterNumber > 7) {
+          brownSetterNumber = 7;
+          brownSetter.textContent = brownSetterNumber;
+        }
+
+        if (redSetterNumber > 7) {
+          redSetterNumber = 7;
+          redSetter.textContent = redSetterNumber;
+        }
       }
     } else if (
       brownTwoNumber >= cardIndex.brown &&
@@ -480,7 +462,7 @@ brownSetter.addEventListener("click", function () {
         currentCounter++;
         brownCounter++;
         brown--;
-        console.log(currentCounter, brownCounter, brown);
+
         if (currentPlayer) {
           brownOneNumber++;
           brownOne.textContent = brownOneNumber;
