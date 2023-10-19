@@ -327,6 +327,10 @@ function displayAndPurchaseCards(
             } else {
               cardElement.innerHTML = "";
             }
+          } else if (card.arrayType === 3) {
+            //
+          } else if (card.arrayType === 4) {
+            cardElement.innerHTML = "";
           }
         }
       }

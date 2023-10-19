@@ -1267,6 +1267,7 @@ let card70 = {
 };
 cardsLevelTwo.push(card70);
 let card71 = {
+  arrayType: 3,
   mainColor: "brown",
   pointValue: 3,
   brown: 0,
@@ -1284,6 +1285,7 @@ let card71 = {
 };
 cardsLevelThree.push(card71);
 let card72 = {
+  arrayType: 3,
   mainColor: "brown",
   pointValue: 4,
   brown: 0,
@@ -1301,6 +1303,7 @@ let card72 = {
 };
 cardsLevelThree.push(card72);
 let card73 = {
+  arrayType: 3,
   mainColor: "brown",
   pointValue: 4,
   brown: 3,
@@ -1318,6 +1321,7 @@ let card73 = {
 };
 cardsLevelThree.push(card73);
 let card74 = {
+  arrayType: 3,
   mainColor: "brown",
   pointValue: 5,
   brown: 3,
@@ -1335,6 +1339,7 @@ let card74 = {
 };
 cardsLevelThree.push(card74);
 let card75 = {
+  arrayType: 3,
   mainColor: "blue",
   pointValue: 3,
   brown: 5,
@@ -1352,6 +1357,7 @@ let card75 = {
 };
 cardsLevelThree.push(card75);
 let card76 = {
+  arrayType: 3,
   mainColor: "blue",
   pointValue: 4,
   brown: 0,
@@ -1369,6 +1375,7 @@ let card76 = {
 };
 cardsLevelThree.push(card76);
 let card77 = {
+  arrayType: 3,
   mainColor: "blue",
   pointValue: 4,
   brown: 3,
@@ -1386,6 +1393,7 @@ let card77 = {
 };
 cardsLevelThree.push(card77);
 let card78 = {
+  arrayType: 3,
   mainColor: "blue",
   pointValue: 5,
   brown: 0,
@@ -1403,6 +1411,7 @@ let card78 = {
 };
 cardsLevelThree.push(card78);
 let card79 = {
+  arrayType: 3,
   mainColor: "silver",
   pointValue: 3,
   brown: 3,
@@ -1420,6 +1429,7 @@ let card79 = {
 };
 cardsLevelThree.push(card79);
 let card80 = {
+  arrayType: 3,
   mainColor: "silver",
   pointValue: 4,
   brown: 7,
@@ -1437,6 +1447,7 @@ let card80 = {
 };
 cardsLevelThree.push(card80);
 let card81 = {
+  arrayType: 3,
   mainColor: "silver",
   pointValue: 4,
   brown: 3,
@@ -1454,6 +1465,7 @@ let card81 = {
 };
 cardsLevelThree.push(card81);
 let card82 = {
+  arrayType: 3,
   mainColor: "silver",
   pointValue: 5,
   brown: 7,
@@ -1471,6 +1483,7 @@ let card82 = {
 };
 cardsLevelThree.push(card82);
 let card83 = {
+  arrayType: 3,
   mainColor: "green",
   pointValue: 3,
   brown: 3,
@@ -1488,6 +1501,7 @@ let card83 = {
 };
 cardsLevelThree.push(card83);
 let card84 = {
+  arrayType: 3,
   mainColor: "green",
   pointValue: 4,
   brown: 0,
@@ -1505,6 +1519,7 @@ let card84 = {
 };
 cardsLevelThree.push(card84);
 let card85 = {
+  arrayType: 3,
   mainColor: "green",
   pointValue: 4,
   brown: 0,
@@ -1522,6 +1537,7 @@ let card85 = {
 };
 cardsLevelThree.push(card85);
 let card86 = {
+  arrayType: 3,
   mainColor: "green",
   pointValue: 5,
   brown: 0,
@@ -1539,6 +1555,7 @@ let card86 = {
 };
 cardsLevelThree.push(card86);
 let card87 = {
+  arrayType: 3,
   mainColor: "red",
   pointValue: 3,
   brown: 5,
@@ -1556,6 +1573,7 @@ let card87 = {
 };
 cardsLevelThree.push(card87);
 let card88 = {
+  arrayType: 3,
   mainColor: "red",
   pointValue: 4,
   brown: 0,
@@ -1573,6 +1591,7 @@ let card88 = {
 };
 cardsLevelThree.push(card88);
 let card89 = {
+  arrayType: 3,
   mainColor: "red",
   pointValue: 4,
   brown: 0,
@@ -1590,6 +1609,7 @@ let card89 = {
 };
 cardsLevelThree.push(card89);
 let card90 = {
+  arrayType: 3,
   mainColor: "red",
   pointValue: 5,
   brown: 0,
@@ -1608,83 +1628,155 @@ let card90 = {
 cardsLevelThree.push(card90);
 //nobles
 let noble1 = {
+  arrayType: 4,
   pointValue: 5,
   brown: 0,
   blue: 0,
   green: 4,
   red: 4,
   silver: 0,
+  subpoints: {
+    brown: 0,
+    green: 0,
+    silver: 0,
+    blue: 0,
+    red: 0,
+  },
 };
 nobles.push(noble1);
 let noble2 = {
+  arrayType: 4,
   pointValue: 5,
   brown: 3,
   blue: 0,
   green: 0,
   red: 3,
   silver: 3,
+  subpoints: {
+    brown: 0,
+    green: 0,
+    silver: 0,
+    blue: 0,
+    red: 0,
+  },
 };
 nobles.push(noble2);
 let noble3 = {
+  arrayType: 4,
   pointValue: 5,
   brown: 4,
   blue: 0,
   green: 0,
   red: 0,
   silver: 4,
+  subpoints: {
+    brown: 0,
+    green: 0,
+    silver: 0,
+    blue: 0,
+    red: 0,
+  },
 };
 nobles.push(noble3);
 let noble4 = {
+  arrayType: 4,
   pointValue: 5,
   brown: 0,
   blue: 4,
   green: 4,
   red: 0,
   silver: 0,
+  subpoints: {
+    brown: 0,
+    green: 0,
+    silver: 0,
+    blue: 0,
+    red: 0,
+  },
 };
 nobles.push(noble4);
 let noble5 = {
+  arrayType: 4,
   pointValue: 5,
   brown: 0,
   blue: 3,
   green: 3,
   red: 3,
   silver: 0,
+  subpoints: {
+    brown: 0,
+    green: 0,
+    silver: 0,
+    blue: 0,
+    red: 0,
+  },
 };
 nobles.push(noble5);
 let noble6 = {
+  arrayType: 4,
   pointValue: 5,
   brown: 0,
   blue: 3,
   green: 3,
   red: 0,
   silver: 3,
+  subpoints: {
+    brown: 0,
+    green: 0,
+    silver: 0,
+    blue: 0,
+    red: 0,
+  },
 };
 nobles.push(noble6);
 let noble7 = {
+  arrayType: 4,
   pointValue: 5,
   brown: 4,
   blue: 0,
   green: 0,
   red: 4,
   silver: 0,
+  subpoints: {
+    brown: 0,
+    green: 0,
+    silver: 0,
+    blue: 0,
+    red: 0,
+  },
 };
 nobles.push(noble7);
 let noble8 = {
+  arrayType: 4,
   pointValue: 5,
   brown: 3,
   blue: 3,
   green: 0,
   red: 0,
   silver: 3,
+  subpoints: {
+    brown: 0,
+    green: 0,
+    silver: 0,
+    blue: 0,
+    red: 0,
+  },
 };
 nobles.push(noble8);
 let noble9 = {
+  arrayType: 4,
   pointValue: 5,
   brown: 3,
   blue: 0,
   green: 3,
   red: 3,
   silver: 0,
+  subpoints: {
+    brown: 0,
+    green: 0,
+    silver: 0,
+    blue: 0,
+    red: 0,
+  },
 };
 nobles.push(noble9);
