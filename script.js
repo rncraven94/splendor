@@ -284,11 +284,11 @@ function displayAndPurchaseCards(
 
       //code for adding new card to take its place
 
-      console.log(brownOnePurchase);
-      console.log(greenOnePurchase);
-      console.log(silverOnePurchase);
-      console.log(blueOnePurchase);
-      console.log(redOnePurchase);
+      console.log(brownTwoPurchase);
+      console.log(greenTwoPurchase);
+      console.log(silverTwoPurchase);
+      console.log(blueTwoPurchase);
+      console.log(redTwoPurchase);
       if (currentCounter < 1) {
         if (
           brownOnePurchase >= card.brown &&
@@ -345,6 +345,8 @@ function displayAndPurchaseCards(
           } else if (card.arrayType === 4) {
             cardElement.innerHTML = "";
           }
+        } else if (brownTwoPurchase >= card.brown) {
+          console.log("success");
         }
       }
     });
@@ -426,58 +428,74 @@ function purchaseCard(cardIndex, arrayIndex) {
           brownSetterNumber = 7;
           brownSetter.textContent = brownSetterNumber;
         }
+        if (greenSetterNumber > 7) {
+          greenSetterNumber = 7;
+          greenSetter.textContent = greenSetterNumber;
+        }
 
+        if (silverSetterNumber > 7) {
+          silverSetterNumber = 7;
+          silverSetter.textContent = silverSetterNumber;
+        }
+
+        if (blueSetterNumber > 7) {
+          blueSetterNumber = 7;
+          blueSetter.textContent = blueSetterNumber;
+        }
         if (redSetterNumber > 7) {
           redSetterNumber = 7;
           redSetter.textContent = redSetterNumber;
         }
       }
-    } else if (
-      brownTwoNumber >= cardIndex.brown &&
-      greenTwoNumber >= cardIndex.green &&
-      silverTwoNumber >= cardIndex.silver &&
-      blueTwoNumber >= cardIndex.blue &&
-      redTwoNumber >= cardIndex.red
-    ) {
-      //brown
-      brownTwoNumber = brownTwoSubPoint;
-      brownSetterNumber = brownSetterNumber + cardIndex.brown;
-      brownSetter.textContent = brownSetterNumber;
-      brownTwoSubPoint = brownTwoSubPoint + cardIndex.subpoints.brown;
-      brownTwoNumber = brownTwoNumber + cardIndex.subpoints.brown;
-      brownTwo.textContent = brownTwoNumber;
-      //green
-      greenTwoNumber = greenTwoSubPoint;
-      greenSetterNumber = greenSetterNumber + cardIndex.green;
-      greenSetter.textContent = greenSetterNumber;
-      greenTwoSubPoint = greenTwoSubPoint + cardIndex.subpoints.green;
-      greenTwoNumber = greenTwoNumber + cardIndex.subpoints.green;
-      greenTwo.textContent = greenTwoNumber;
-      //silver
-      silverTwoNumber = silverTwoSubPoint;
-      silverSetterNumber = silverSetterNumber + cardIndex.silver;
-      silverSetter.textContent = silverSetterNumber;
-      silverTwoSubPoint = silverTwoSubPoint + cardIndex.subpoints.silver;
-      silverTwoNumber = silverTwoNumber + cardIndex.subpoints.silver;
-      silverTwo.textContent = silverTwoNumber;
-      //blue
-      blueTwoNumber = blueTwoSubPoint;
-      blueSetterNumber = blueSetterNumber + cardIndex.blue;
-      blueSetter.textContent = blueSetterNumber;
-      blueTwoSubPoint = blueTwoSubPoint + cardIndex.subpoints.blue;
-      blueTwoNumber = blueTwoNumber + cardIndex.subpoints.blue;
-      blueTwo.textContent = blueTwoNumber;
-      //red
-      redTwoNumber = redTwoSubPoint;
-      redSetterNumber = redSetterNumber + cardIndex.red;
-      redSetter.textContent = redSetterNumber;
-      redTwoSubPoint = redTwoSubPoint + cardIndex.subpoints.red;
-      redTwoNumber = redTwoNumber + cardIndex.subpoints.red;
-      redTwo.textContent = redTwoNumber;
+    } else if ((currentPlayer = false)) {
+      if (
+        brownTwoNumber >= cardIndex.brown &&
+        greenTwoNumber >= cardIndex.green &&
+        silverTwoNumber >= cardIndex.silver &&
+        blueTwoNumber >= cardIndex.blue &&
+        redTwoNumber >= cardIndex.red
+      ) {
+        //brown
+        brownTwoPurchase = brownTwoNumber;
+        brownTwoNumber = brownTwoSubPoint;
+        brownSetterNumber = brownSetterNumber + cardIndex.brown;
+        brownSetter.textContent = brownSetterNumber;
+        brownTwoSubPoint = brownTwoSubPoint + cardIndex.subpoints.brown;
+        brownTwoNumber = brownTwoNumber + cardIndex.subpoints.brown;
+        brownTwo.textContent = brownTwoNumber;
+        //green
+        greenTwoNumber = greenTwoSubPoint;
+        greenSetterNumber = greenSetterNumber + cardIndex.green;
+        greenSetter.textContent = greenSetterNumber;
+        greenTwoSubPoint = greenTwoSubPoint + cardIndex.subpoints.green;
+        greenTwoNumber = greenTwoNumber + cardIndex.subpoints.green;
+        greenTwo.textContent = greenTwoNumber;
+        //silver
+        silverTwoNumber = silverTwoSubPoint;
+        silverSetterNumber = silverSetterNumber + cardIndex.silver;
+        silverSetter.textContent = silverSetterNumber;
+        silverTwoSubPoint = silverTwoSubPoint + cardIndex.subpoints.silver;
+        silverTwoNumber = silverTwoNumber + cardIndex.subpoints.silver;
+        silverTwo.textContent = silverTwoNumber;
+        //blue
+        blueTwoNumber = blueTwoSubPoint;
+        blueSetterNumber = blueSetterNumber + cardIndex.blue;
+        blueSetter.textContent = blueSetterNumber;
+        blueTwoSubPoint = blueTwoSubPoint + cardIndex.subpoints.blue;
+        blueTwoNumber = blueTwoNumber + cardIndex.subpoints.blue;
+        blueTwo.textContent = blueTwoNumber;
+        //red
+        redTwoNumber = redTwoSubPoint;
+        redSetterNumber = redSetterNumber + cardIndex.red;
+        redSetter.textContent = redSetterNumber;
+        redTwoSubPoint = redTwoSubPoint + cardIndex.subpoints.red;
+        redTwoNumber = redTwoNumber + cardIndex.subpoints.red;
+        redTwo.textContent = redTwoNumber;
 
-      //score
-      playerTwoScore = playerTwoScore + cardIndex.pointValue;
-      playerTwoScoreText.textContent = playerTwoScore;
+        //score
+        playerTwoScore = playerTwoScore + cardIndex.pointValue;
+        playerTwoScoreText.textContent = playerTwoScore;
+      }
     }
   }
 }
