@@ -70,6 +70,9 @@ let blueTwoNumber = 0;
 const redOne = document.getElementById("player-one-red");
 let redOneNumber = 0;
 const redTwo = document.getElementById("player-two-red");
+const hidden = document.getElementById("hidden");
+const hidden1 = document.getElementById("hidden1");
+const hidden2 = document.getElementById("hidden2");
 let redTwoNumber = 0;
 let brownOnePurchase;
 let greenOnePurchase;
@@ -96,6 +99,7 @@ function switchPlayers() {
   silverCounter = 0;
   blueCounter = 0;
   redCounter = 0;
+
   if (!currentPlayer) {
     playerOneSection.classList.remove("active-player");
     playerTwoSection.classList.add("active-player");
@@ -105,9 +109,14 @@ function switchPlayers() {
   }
 
   if (playerOneScore >= 15) {
-    alert("Player One has Won!");
+    hidden.classList.remove("hidden");
+    hidden1.classList.remove("hidden1");
+
+    //
   } else if (playerTwoScore >= 15) {
-    alert("Player Two has Won!");
+    //
+    hidden.classList.remove("hidden");
+    hidden2.classList.remove("hidden2");
   }
 }
 

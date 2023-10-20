@@ -170,3 +170,9 @@
   max-width: 4rem;
   margin-left: 3.6rem;
 }
+
+.hidden,
+.hidden1,
+.hidden2 {
+  display: none;
+}
