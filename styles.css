@@ -21,11 +21,25 @@
   flex-direction: column;
   border-radius: 5%;
   margin-bottom: 0.2rem;
+  margin-top: 0.8rem;
 }
 .menu {
   display: flex;
   flex-direction: column;
+  gap: 0.8rem;
 }
+
+.menu-item:visited,
+.menu-item:link {
+  transition: all, 0.5s;
+}
+.menu-item:hover,
+.menu-item:active {
+  background-color: black;
+  color: white;
+  transition: all, 0.5s;
+}
+
 .setter-body {
   padding: 0rem 2.4rem;
 }
@@ -88,6 +102,15 @@
 .player-two-score {
   font-size: 6.4rem;
 }
+/* division of board */
+.column-labels {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  list-style-type: none;
+  /* text-align: center; */
+  margin: 2.4rem 0rem;
+  font-size: 2.4rem;
+}
 
 /* cards */
 .card-row {
@@ -108,6 +131,7 @@
   justify-content: center;
   text-align: center;
   transition: box-shadow 0.5s;
+  margin-bottom: 0.8rem;
 }
 
 .card-box:hover {
@@ -119,7 +143,6 @@
   flex-direction: row; */
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
 }
 
 .brown-box-color {
