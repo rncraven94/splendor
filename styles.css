@@ -26,6 +26,26 @@
   display: flex;
   flex-direction: column;
 }
+.setter-body {
+  padding: 0rem 2.4rem;
+}
+
+.brown-setter,
+.green-setter,
+.silver-setter,
+.blue-setter,
+.red-setter {
+  font-weight: 400;
+  transition: 0.5s;
+}
+
+.brown-setter:hover,
+.green-setter:hover,
+.silver-setter:hover,
+.blue-setter:hover,
+.red-setter:hover {
+  font-weight: bold;
+}
 
 .brown-setter,
 .player-one-brown,
