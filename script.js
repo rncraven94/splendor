@@ -240,7 +240,7 @@ function displayAndPurchaseCards(
     cardElement.classList.add("card");
 
     cardElement.innerHTML = ` <div class="card-box ${card.mainColor}-box-color card-${card.arrayType}">  
-      <p class="card-point-value card-list">${card.pointValue}</p> <p class="card-list card-value"> <p>${card.brown}</p> <p>${card.green}</p><p> ${card.silver}</p> <p>${card.blue}</p> <p>${card.red}</p></p>  <button class="purchase-btn" data-card-index="${index}"">Purchase</button> </div>`;
+      <p class="card-point-value card-list">${card.pointValue}</p> <p class="card-list card-value"> <p>Brown: ${card.brown}</p> <p>Green: ${card.green}</p><p>Silver: ${card.silver}</p> <p>Blue:  ${card.blue}</p> <p>Red:   ${card.red}</p></p>  <button class="purchase-btn" data-card-index="${index}"">Purchase</button> </div>`;
 
     const purchaseBtn = cardElement.querySelector(".purchase-btn");
 
