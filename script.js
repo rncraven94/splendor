@@ -88,6 +88,7 @@ let redTwoPurchase;
 const helper = document.getElementById("help");
 function help() {
   //help section for rules
+  window.open("howtoplay.html", "_blank");
 }
 helper.addEventListener("click", help);
 
