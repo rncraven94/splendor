@@ -146,23 +146,23 @@
 }
 
 .brown-box-color {
-  background-color: brown;
+  background-color: sienna;
 }
 .blue-box-color {
-  background-color: blue;
+  background-color: lightblue;
 }
 .silver-box-color {
   background-color: silver;
 }
 .green-box-color {
-  background-color: green;
+  background-color: lightgreen;
 }
 .red-box-color {
-  background-color: red;
+  background-color: lightcoral;
 }
 
 .card-point-value {
-  font-size: 1.2rem;
+  font-size: 3.6rem;
 }
 
 .purchase-btn {
@@ -175,4 +175,11 @@
 .hidden1,
 .hidden2 {
   display: none;
+}
+
+.card-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.card-value {
 }
