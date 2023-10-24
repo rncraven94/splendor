@@ -188,3 +188,10 @@
 .card-value {
   margin-right: 0.8rem;
 }
+
+.winner {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}

@@ -112,12 +112,14 @@ function switchPlayers() {
   if (playerOneScore >= 15) {
     hidden.classList.remove("hidden");
     hidden1.classList.remove("hidden1");
+    hidden1.classList.add("winner");
 
     //
   } else if (playerTwoScore >= 15) {
     //
     hidden.classList.remove("hidden");
     hidden2.classList.remove("hidden2");
+    hidden2.classList.add("winner");
   }
 }
 
