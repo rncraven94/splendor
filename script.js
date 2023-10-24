@@ -242,8 +242,18 @@ function displayAndPurchaseCards(
     const cardName = card;
     cardElement.classList.add("card");
 
-    cardElement.innerHTML = ` <div class="card-box ${card.mainColor}-box-color card-${card.arrayType}">  
-      <p class="card-point-value card-list">${card.pointValue}</p> <p class="card-list card-value"> <p>Brown: ${card.brown}</p> <p>Green: ${card.green}</p><p>Silver: ${card.silver}</p> <p>Blue:  ${card.blue}</p> <p>Red:   ${card.red}</p></p>  <button class="purchase-btn" data-card-index="${index}"">Purchase</button> </div>`;
+    cardElement.innerHTML = ` <div class="card-box ${
+      card.mainColor
+    }-box-color card-${card.arrayType}">  
+      <p class="card-point-value card-list">${
+        card.pointValue
+      }</p> <p class="card-list card-value"> <p>${
+      card.brown > 0 ? `Brown: ${card.brown}` : ""
+    }</p> <p>${card.green > 0 ? `Green: ${card.green}` : ""}</p><p>${
+      card.silver > 0 ? `Silver: ${card.silver}` : ""
+    }</p> <p>${card.blue > 0 ? `Blue:  ${card.blue}` : ""}</p> <p>${
+      card.red > 0 ? `Red:   ${card.red}` : ""
+    }</p></p>  <button class="purchase-btn" data-card-index="${index}"">Purchase</button> </div>`;
 
     const purchaseBtn = cardElement.querySelector(".purchase-btn");
 
