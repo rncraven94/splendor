@@ -200,3 +200,10 @@
   font-family: Roboto;
   text-align: center;
 }
+
+.rule-text {
+  font-size: 2.4rem;
+  margin: 6.4rem;
+  text-align: center;
+  line-height: 150%;
+}
