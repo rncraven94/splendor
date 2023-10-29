@@ -35,7 +35,7 @@ let playerOneScore = 0;
 const playerTwoScoreText = document.getElementById("player-two-score");
 let playerTwoScore = 0;
 
-const purchaseBtn = document.getElementById("purchase-btn");
+// const purchaseBtn = document.getElementById("purchase-btn");
 const newGameButton = document.getElementById("new-game");
 const undoButton = document.getElementById("undo-button");
 const confirmButton = document.getElementById("confirm-button");
@@ -85,6 +85,8 @@ let silverTwoPurchase;
 let blueTwoPurchase;
 let redTwoPurchase;
 
+// button functions
+
 const helper = document.getElementById("help");
 function help() {
   //help section for rules
@@ -92,6 +94,7 @@ function help() {
 }
 helper.addEventListener("click", help);
 
+//switching players
 function switchPlayers() {
   currentPlayer = !currentPlayer;
   currentCounter = 0;
@@ -125,6 +128,7 @@ function switchPlayers() {
 
 confirmButton.addEventListener("click", switchPlayers);
 
+//undoing current gem selection in the setters
 undoButton.addEventListener("click", function () {
   currentCounter = 0;
   //brown section
@@ -192,6 +196,7 @@ undoButton.addEventListener("click", function () {
   }
 });
 
+//new game function reloads the webpage and all the functions and cards are back to their original place
 newGameButton.addEventListener("click", function () {
   location.reload();
 });
@@ -205,6 +210,7 @@ function shuffleArray(array) {
   }
 }
 
+//shuffling the arrays of the stacks of cards
 shuffleArray(cardsLevelOne);
 shuffleArray(cardsLevelTwo);
 shuffleArray(cardsLevelThree);
