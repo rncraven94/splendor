@@ -249,17 +249,18 @@ function displayAndPurchaseCards(
     cardElement.classList.add("card");
 
     cardElement.innerHTML = ` <div class="card-box ${
-      card.mainColor
+      card.mainColor //colors the card
     }-box-color card-${card.arrayType}">  
       <p class="card-point-value card-list">${
-        card.pointValue
+        card.pointValue //point value gives whomever purchases the card points that ultimately lead to winning
       }</p> <p class="card-list card-value"> <p>${
+      //all the values here are the qualifiers to buy the card
       card.brown > 0 ? `Brown: ${card.brown}` : ""
     }</p> <p>${card.green > 0 ? `Green: ${card.green}` : ""}</p><p>${
       card.silver > 0 ? `Silver: ${card.silver}` : ""
     }</p> <p>${card.blue > 0 ? `Blue:  ${card.blue}` : ""}</p> <p>${
       card.red > 0 ? `Red:   ${card.red}` : ""
-    }</p></p>  <button class="purchase-btn" data-card-index="${index}"">Purchase</button> </div>`;
+    }</p></p>  <button class="purchase-btn" data-card-index="${index}"">Purchase</button> </div>`; //this snippet is where the user purchases
 
     const purchaseBtn = cardElement.querySelector(".purchase-btn");
 
@@ -270,11 +271,6 @@ function displayAndPurchaseCards(
 
       //code for adding new card to take its place
 
-      console.log(brownTwoPurchase);
-      console.log(greenTwoPurchase);
-      console.log(silverTwoPurchase);
-      console.log(blueTwoPurchase);
-      console.log(redTwoPurchase);
       if (currentCounter < 1) {
         if (
           brownOnePurchase >= card.brown &&
