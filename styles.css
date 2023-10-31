@@ -210,3 +210,11 @@
   text-align: center;
   line-height: 150%;
 }
+
+/* rule images */
+
+.rule-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
