@@ -103,8 +103,6 @@ function switchPlayers() {
   silverCounter = 0;
   blueCounter = 0;
   redCounter = 0;
-  playerOneScore = 15;
-  playerOneScoreText.textContent = playerOneScore;
 
   if (!currentPlayer) {
     playerOneSection.classList.remove("active-player");
